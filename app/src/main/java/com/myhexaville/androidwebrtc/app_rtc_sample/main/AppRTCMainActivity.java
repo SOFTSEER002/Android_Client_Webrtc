@@ -13,14 +13,18 @@ package com.myhexaville.androidwebrtc.app_rtc_sample.main;
 import android.Manifest;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 
 import com.myhexaville.androidwebrtc.R;
 import com.myhexaville.androidwebrtc.app_rtc_sample.call.CallActivity;
 import com.myhexaville.androidwebrtc.databinding.ActivityMainBinding;
+
+import java.util.concurrent.ThreadLocalRandom;
 
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
@@ -36,13 +40,16 @@ public class AppRTCMainActivity extends AppCompatActivity {
     private static final int RC_CALL = 111;
     private ActivityMainBinding binding;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        binding.connectButton.setOnClickListener(v -> connect());
-        binding.roomEdittext.requestFocus();
+//        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+////        binding.connectButton.setOnClickListener(v -> connect());
+//
+//        binding.roomEdittext.requestFocus();
+        connect();
     }
 
     @Override
@@ -51,11 +58,12 @@ public class AppRTCMainActivity extends AppCompatActivity {
         EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @AfterPermissionGranted(RC_CALL)
     private void connect() {
         String[] perms = {Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO};
         if (EasyPermissions.hasPermissions(this, perms)) {
-            connectToRoom(binding.roomEdittext.getText().toString());
+            connectToRoom(ThreadLocalRandom.current().nextInt(10000, 999999)+"");
         } else {
             EasyPermissions.requestPermissions(this, "Need some permissions", RC_CALL, perms);
         }

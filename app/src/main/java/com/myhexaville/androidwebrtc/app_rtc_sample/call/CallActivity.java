@@ -11,15 +11,22 @@
 package com.myhexaville.androidwebrtc.app_rtc_sample.call;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.graphics.Bitmap;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Display;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.zxing.WriterException;
 import com.myhexaville.androidwebrtc.R;
 import com.myhexaville.androidwebrtc.databinding.ActivityCallBinding;
 import com.myhexaville.androidwebrtc.app_rtc_sample.web_rtc.AppRTCAudioManager;
@@ -45,6 +52,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import androidmads.library.qrgenearator.QRGContents;
+import androidmads.library.qrgenearator.QRGEncoder;
+
 import static com.myhexaville.androidwebrtc.app_rtc_sample.util.Constants.CAPTURE_PERMISSION_REQUEST_CODE;
 import static com.myhexaville.androidwebrtc.app_rtc_sample.util.Constants.EXTRA_ROOMID;
 import static com.myhexaville.androidwebrtc.app_rtc_sample.util.Constants.LOCAL_HEIGHT_CONNECTED;
@@ -64,12 +74,9 @@ import static org.webrtc.RendererCommon.ScalingType.SCALE_ASPECT_FILL;
 import static org.webrtc.RendererCommon.ScalingType.SCALE_ASPECT_FIT;
 
 
-/**
- * Activity for peer connection call setup, call waiting
- * and call view.
- */
 public class CallActivity extends AppCompatActivity
         implements AppRTCClient.SignalingEvents, PeerConnectionClient.PeerConnectionEvents, OnCallEvents {
+
     private static final String LOG_TAG = "CallActivity";
 
     private PeerConnectionClient peerConnectionClient;
@@ -90,6 +97,10 @@ public class CallActivity extends AppCompatActivity
     private boolean micEnabled = true;
 
     private ActivityCallBinding binding;
+    Dialog dialog;
+    String roomId = null;
+    Bitmap bitmap;
+    QRGEncoder qrgEncoder;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -99,6 +110,14 @@ public class CallActivity extends AppCompatActivity
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_call);
+
+        // Get Intent parameters.
+        final Intent intent = getIntent();
+        roomId = intent.getStringExtra(EXTRA_ROOMID);
+
+// create dialog to show QR code
+       showQR();
+
 
         remoteRenderers.add(binding.remoteVideoView);
 
@@ -112,10 +131,8 @@ public class CallActivity extends AppCompatActivity
         binding.remoteVideoView.setEnableHardwareScaler(true);
         updateVideoView();
 
-        // Get Intent parameters.
-        final Intent intent = getIntent();
-        String roomId = intent.getStringExtra(EXTRA_ROOMID);
         Log.e(LOG_TAG, "Room ID: " + roomId);
+
         if (roomId == null || roomId.length() == 0) {
             logAndToast(getString(R.string.missing_url));
             Log.e(LOG_TAG, "Incorrect room ID in intent!");
@@ -297,6 +314,7 @@ public class CallActivity extends AppCompatActivity
     }
 
     private void startCall() {
+
         callStartedTimeMs = System.currentTimeMillis();
 
         // Start room connection.
@@ -315,6 +333,8 @@ public class CallActivity extends AppCompatActivity
 
     // Should be called from UI thread
     private void callConnected() {
+        dialog.dismiss();
+        Log.e("room==>", roomId);
         final long delta = System.currentTimeMillis() - callStartedTimeMs;
         Log.i(LOG_TAG, "Call connected: delay=" + delta + "ms");
         if (peerConnectionClient == null || isError) {
@@ -584,5 +604,38 @@ public class CallActivity extends AppCompatActivity
     @Override
     public void onPeerConnectionError(final String description) {
         reportError(description);
+    }
+
+
+    void showQR(){
+        if (roomId.length() > 0) {
+            WindowManager manager = (WindowManager) getSystemService(WINDOW_SERVICE);
+            Display display = manager.getDefaultDisplay();
+            Point point = new Point();
+            display.getSize(point);
+            int width = point.x;
+            int height = point.y;
+            int smallerDimension = width < height ? width : height;
+            smallerDimension = smallerDimension * 3 / 4;
+
+            qrgEncoder = new QRGEncoder(
+                    roomId, null,
+                    QRGContents.Type.TEXT,
+                    smallerDimension);
+            try {
+                bitmap = qrgEncoder.encodeAsBitmap();
+                dialog = new Dialog(this, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+                dialog.setContentView(R.layout.custom_record_timer);
+                ImageView QR_img = dialog.findViewById(R.id.QR_img);
+                QR_img.setImageBitmap(bitmap);
+                dialog.show();
+            } catch (WriterException e) {
+                Log.v(this+"", e.toString());
+            }
+        }
+
+
+
+
     }
 }

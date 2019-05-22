@@ -45,7 +45,7 @@
             android:theme="@style/AppTheme.Call" />
         <activity
             android:name="com.myhexaville.androidwebrtc.app_rtc_sample.main.AppRTCMainActivity"
-            android:label="@string/title_activity_launch"
+            android:label="Video call"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -89,11 +89,6 @@
             android:exported="false"
             android:label=""
             android:theme="@style/EasyPermissions.Transparent" />
-
-        <provider
-            android:name="com.android.tools.ir.server.InstantRunContentProvider"
-            android:authorities="com.myhexaville.androidwebrtc.com.android.tools.ir.server.InstantRunContentProvider"
-            android:multiprocess="true" />
     </application>
 
 </manifest>
