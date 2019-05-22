@@ -53,6 +53,8 @@ dependencies {
     implementation "com.android.support:support-v4:$support_version"
     implementation 'com.myhexaville:smart-image-picker:1.0.4'
     implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
+    implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
+
 
 
     implementation 'pub.devrel:easypermissions:1.1.3'
