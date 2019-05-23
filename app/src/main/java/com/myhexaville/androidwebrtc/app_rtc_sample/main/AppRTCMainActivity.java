@@ -37,6 +37,7 @@ import com.myhexaville.androidwebrtc.R;
 import com.myhexaville.androidwebrtc.app_rtc_sample.call.CallActivity;
 import com.myhexaville.androidwebrtc.databinding.ActivityMainBinding;
 
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 import pub.devrel.easypermissions.AfterPermissionGranted;
@@ -48,7 +49,7 @@ import static com.myhexaville.androidwebrtc.app_rtc_sample.util.Constants.EXTRA_
 /**
  * Handles the initial setup where the user selects which room to join.
  */
-public class AppRTCMainActivity extends AppCompatActivity{
+public class AppRTCMainActivity extends AppCompatActivity {
     private static final String LOG_TAG = "AppRTCMainActivity";
     private static final int CONNECTION_REQUEST = 1;
     private static final int RC_CALL = 111;
@@ -62,13 +63,9 @@ public class AppRTCMainActivity extends AppCompatActivity{
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
 
-       connect();
+        connect();
 
     }
-
-
-
-
 
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -76,15 +73,19 @@ public class AppRTCMainActivity extends AppCompatActivity{
     private void connect() {
         String[] perms = {Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO};
         if (EasyPermissions.hasPermissions(this, perms)) {
-            connectToRoom(ThreadLocalRandom.current().nextInt(10000, 999999) + "");
+            final int min = 10000;
+            final int max = 999999;
+            final int random = new Random().nextInt((max - min) + 1) + min;
+            connectToRoom(random + "");
         } else {
             EasyPermissions.requestPermissions(this, "Need some permissions", RC_CALL, perms);
         }
     }
 
 
-
     private void connectToRoom(String roomId) {
+        Log.e("Random :-",roomId);
+
         Intent intent = new Intent(this, CallActivity.class);
         intent.putExtra(EXTRA_ROOMID, roomId);
         startActivityForResult(intent, CONNECTION_REQUEST);

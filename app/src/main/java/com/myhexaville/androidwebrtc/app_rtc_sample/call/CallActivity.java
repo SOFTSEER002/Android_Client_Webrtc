@@ -112,7 +112,7 @@ public class CallActivity extends AppCompatActivity
         binding = DataBindingUtil.setContentView(this, R.layout.activity_call);
 
         // Get Intent parameters.
-        final Intent intent = getIntent();
+        Intent intent = getIntent();
         roomId = intent.getStringExtra(EXTRA_ROOMID);
 
 // create dialog to show QR code
@@ -131,7 +131,6 @@ public class CallActivity extends AppCompatActivity
         binding.remoteVideoView.setEnableHardwareScaler(true);
         updateVideoView();
 
-        Log.e(LOG_TAG, "Room ID: " + roomId);
 
         if (roomId == null || roomId.length() == 0) {
             logAndToast(getString(R.string.missing_url));
@@ -609,6 +608,8 @@ public class CallActivity extends AppCompatActivity
 
     void showQR(){
         if (roomId.length() > 0) {
+            Log.e(LOG_TAG, "Room ID: " + roomId);
+
             WindowManager manager = (WindowManager) getSystemService(WINDOW_SERVICE);
             Display display = manager.getDefaultDisplay();
             Point point = new Point();
