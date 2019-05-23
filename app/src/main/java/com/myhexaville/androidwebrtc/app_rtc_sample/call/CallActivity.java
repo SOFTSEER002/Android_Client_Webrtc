@@ -115,8 +115,6 @@ public class CallActivity extends AppCompatActivity
         Intent intent = getIntent();
         roomId = intent.getStringExtra(EXTRA_ROOMID);
 
-// create dialog to show QR code
-       showQR();
 
 
         remoteRenderers.add(binding.remoteVideoView);
