@@ -53,7 +53,9 @@ public class AppRTCMainActivity extends AppCompatActivity {
     private static final String LOG_TAG = "AppRTCMainActivity";
     private static final int CONNECTION_REQUEST = 1;
     private static final int RC_CALL = 111;
-
+    final int min = 10000;
+    final int max = 999999;
+    int random;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -62,6 +64,7 @@ public class AppRTCMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
+        random = new Random().nextInt((max - min) + 1) + min;
 
         connect();
 
@@ -73,9 +76,7 @@ public class AppRTCMainActivity extends AppCompatActivity {
     private void connect() {
         String[] perms = {Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO};
         if (EasyPermissions.hasPermissions(this, perms)) {
-            final int min = 10000;
-            final int max = 999999;
-            final int random = new Random().nextInt((max - min) + 1) + min;
+
             connectToRoom(random + "");
         } else {
             EasyPermissions.requestPermissions(this, "Need some permissions", RC_CALL, perms);
@@ -84,10 +85,17 @@ public class AppRTCMainActivity extends AppCompatActivity {
 
 
     private void connectToRoom(String roomId) {
-        Log.e("Random :-",roomId);
+        Log.e("Random :-", roomId);
 
         Intent intent = new Intent(this, CallActivity.class);
         intent.putExtra(EXTRA_ROOMID, roomId);
         startActivityForResult(intent, CONNECTION_REQUEST);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @Override
+    protected void onResume() {
+        connect();
+        super.onResume();
     }
 }

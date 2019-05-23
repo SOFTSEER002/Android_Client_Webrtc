@@ -361,6 +361,8 @@ public class CallActivity extends AppCompatActivity
         if (appRtcClient != null) {
             appRtcClient.disconnectFromRoom();
             appRtcClient = null;
+//            showQR();
+
         }
         if (peerConnectionClient != null) {
             peerConnectionClient.close();
@@ -374,6 +376,7 @@ public class CallActivity extends AppCompatActivity
         }
         if (iceConnected && !isError) {
             setResult(RESULT_OK);
+
         } else {
             setResult(RESULT_CANCELED);
         }
