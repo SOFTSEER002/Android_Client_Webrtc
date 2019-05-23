@@ -40,6 +40,7 @@ import com.myhexaville.androidwebrtc.databinding.ActivityMainBinding;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
+import me.dm7.barcodescanner.zxing.ZXingScannerView;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 
@@ -49,35 +50,46 @@ import static com.myhexaville.androidwebrtc.app_rtc_sample.util.Constants.EXTRA_
 /**
  * Handles the initial setup where the user selects which room to join.
  */
-public class AppRTCMainActivity extends AppCompatActivity {
+public class AppRTCMainActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
     private static final String LOG_TAG = "AppRTCMainActivity";
     private static final int CONNECTION_REQUEST = 1;
     private static final int RC_CALL = 111;
     final int min = 10000;
     final int max = 999999;
     int random;
+    private ZXingScannerView mScannerView;
+    String result;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+//        setContentView(R.layout.activity_main);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
+        mScannerView = new ZXingScannerView(this);   // Programmatically initialize the scanner view
+        setContentView(mScannerView);
         random = new Random().nextInt((max - min) + 1) + min;
 
-        connect();
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @Override
+    public void handleResult(Result rawResult) {
+        result = rawResult.toString();
+        connect(result);
+
+
+    }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @AfterPermissionGranted(RC_CALL)
-    private void connect() {
+    private void connect(String result) {
         String[] perms = {Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO};
         if (EasyPermissions.hasPermissions(this, perms)) {
 
-            connectToRoom(random + "");
+            connectToRoom(result);
         } else {
             EasyPermissions.requestPermissions(this, "Need some permissions", RC_CALL, perms);
         }
@@ -95,7 +107,9 @@ public class AppRTCMainActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onResume() {
-        connect();
+        connect(result);
         super.onResume();
     }
+
+
 }
