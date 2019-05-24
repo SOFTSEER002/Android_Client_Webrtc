@@ -12,6 +12,7 @@ package com.myhexaville.androidwebrtc.app_rtc_sample.main;
 
 import android.Manifest;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -50,7 +51,7 @@ import static com.myhexaville.androidwebrtc.app_rtc_sample.util.Constants.EXTRA_
 /**
  * Handles the initial setup where the user selects which room to join.
  */
-public class AppRTCMainActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
+public class AppRTCMainActivity extends Activity implements ZXingScannerView.ResultHandler {
     private static final String LOG_TAG = "AppRTCMainActivity";
     private static final int CONNECTION_REQUEST = 1;
     private static final int RC_CALL = 111;
@@ -64,11 +65,26 @@ public class AppRTCMainActivity extends AppCompatActivity implements ZXingScanne
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
-
         mScannerView = new ZXingScannerView(this);   // Programmatically initialize the scanner view
         setContentView(mScannerView);
+
+        //      Requesting Permission for the Camera
+        if (ContextCompat.checkSelfPermission(AppRTCMainActivity.this,
+                Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(AppRTCMainActivity.this,
+                Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+
+            if (ActivityCompat.shouldShowRequestPermissionRationale((Activity)
+                    AppRTCMainActivity.this, Manifest.permission.CAMERA)) {
+
+            } else {
+                ActivityCompat.requestPermissions((Activity) AppRTCMainActivity.this,
+                        new String[]{Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO},
+                        200);
+            }
+
+        }
+//        setContentView(R.layout.activity_main);
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
         random = new Random().nextInt((max - min) + 1) + min;
 
 
@@ -78,8 +94,14 @@ public class AppRTCMainActivity extends AppCompatActivity implements ZXingScanne
     @Override
     public void handleResult(Result rawResult) {
         result = rawResult.toString();
-        connect(result);
+        mScannerView.resumeCameraPreview(this);
 
+        if (!result.equals("")) {
+            connect(result);
+        } else {
+            Log.e("Result :-", null);
+        }
+// If you would like to resume scanning, call this method below:
 
     }
 
@@ -107,9 +129,27 @@ public class AppRTCMainActivity extends AppCompatActivity implements ZXingScanne
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onResume() {
-        connect(result);
+//        if (result != null) {
+//            connect(result);
+//        }
+
         super.onResume();
+        mScannerView.setResultHandler(this); // Register ourselves as a handler for scan results.
+        mScannerView.startCamera();
+
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        mScannerView.stopCamera();           // Stop camera on pause
+    }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        mScannerView.setResultHandler(this); // Register ourselves as a handler for scan results.
+        mScannerView.startCamera();
+
+    }
 }

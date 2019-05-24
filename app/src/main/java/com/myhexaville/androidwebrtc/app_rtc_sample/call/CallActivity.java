@@ -15,19 +15,24 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.Point;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.telecom.Call;
 import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.zxing.WriterException;
 import com.myhexaville.androidwebrtc.R;
+import com.myhexaville.androidwebrtc.app_rtc_sample.main.AppRTCMainActivity;
 import com.myhexaville.androidwebrtc.databinding.ActivityCallBinding;
 import com.myhexaville.androidwebrtc.app_rtc_sample.web_rtc.AppRTCAudioManager;
 import com.myhexaville.androidwebrtc.app_rtc_sample.web_rtc.AppRTCClient;
@@ -114,7 +119,6 @@ public class CallActivity extends AppCompatActivity
         // Get Intent parameters.
         Intent intent = getIntent();
         roomId = intent.getStringExtra(EXTRA_ROOMID);
-
 
 
         remoteRenderers.add(binding.remoteVideoView);
@@ -330,7 +334,7 @@ public class CallActivity extends AppCompatActivity
 
     // Should be called from UI thread
     private void callConnected() {
-        dialog.dismiss();
+//        dialog.dismiss();
         Log.e("room==>", roomId);
         final long delta = System.currentTimeMillis() - callStartedTimeMs;
         Log.i(LOG_TAG, "Call connected: delay=" + delta + "ms");
@@ -378,7 +382,36 @@ public class CallActivity extends AppCompatActivity
         } else {
             setResult(RESULT_CANCELED);
         }
-        finish();
+
+        ShowPopupforQrScan();
+    }
+
+    private void ShowPopupforQrScan() {
+        dialog = new Dialog(this);
+        dialog.setContentView(R.layout.custom_pop_up);
+        Button start_call = dialog.findViewById(R.id.start_call);
+        Button scan_again = dialog.findViewById(R.id.scan_again);
+
+        start_call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CallActivity.this, CallActivity.class);
+                intent.putExtra(EXTRA_ROOMID, roomId);
+                startActivityForResult(intent, 1);
+                finish();
+            }
+        });
+        scan_again.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CallActivity.this, AppRTCMainActivity.class));
+                finish();
+                dialog.dismiss();
+            }
+        });
+        dialog = new Dialog(this, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+//        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
     }
 
     private void disconnectWithErrorMessage(final String errorMessage) {
@@ -607,7 +640,7 @@ public class CallActivity extends AppCompatActivity
     }
 
 
-    void showQR(){
+    void showQR() {
         if (roomId.length() > 0) {
             Log.e(LOG_TAG, "Room ID: " + roomId);
 
@@ -632,11 +665,9 @@ public class CallActivity extends AppCompatActivity
                 QR_img.setImageBitmap(bitmap);
                 dialog.show();
             } catch (WriterException e) {
-                Log.v(this+"", e.toString());
+                Log.v(this + "", e.toString());
             }
         }
-
-
 
 
     }

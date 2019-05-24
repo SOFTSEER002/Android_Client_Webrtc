@@ -4,7 +4,7 @@
             "outputFile": "/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xxhdpi-v4/values-xxhdpi-v4.xml",
             "map": [
                 {
-                    "source": "/home/doozy/.gradle/caches/transforms-2/files-2.1/e4057f1a68ae60cb07c87cc47e4d4bca/res/values-xxhdpi-v4/values-xxhdpi-v4.xml",
+                    "source": "/home/doozy/.gradle/caches/transforms-2/files-2.1/8dbea3268f534ea70cbec8ec11dbd55c/res/values-xxhdpi-v4/values-xxhdpi-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

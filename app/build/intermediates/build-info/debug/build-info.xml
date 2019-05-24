@@ -7,19 +7,19 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.4.1"
-    timestamp="1558617504966"
+    timestamp="1558684278457"
     token="413134579238712203"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1384" />
+        duration="1329" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="17" />
+        duration="23" />
     <task
         name="verifier"
         duration="5" />
@@ -30,8 +30,11 @@
 
     <build
         build-mode="FULL"
-        timestamp="1558613730234"
+        timestamp="1558678153268"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            type="SPLIT" />
         <artifact
             location="/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
@@ -46,9 +49,6 @@
             type="SPLIT" />
         <artifact
             location="/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
             location="/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
@@ -74,9 +74,33 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="FIELD_ADDED"
-        timestamp="1558617186744"
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1558683274487"
         verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
         <artifact
             location="/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
@@ -84,7 +108,16 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1558617504966"
+        timestamp="1558684097000"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1558684278457"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
