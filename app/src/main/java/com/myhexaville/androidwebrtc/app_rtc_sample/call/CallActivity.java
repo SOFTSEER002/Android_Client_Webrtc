@@ -387,7 +387,7 @@ public class CallActivity extends AppCompatActivity
     }
 
     private void ShowPopupforQrScan() {
-        dialog = new Dialog(this);
+        dialog = new Dialog(this, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
         dialog.setContentView(R.layout.custom_pop_up);
         Button start_call = dialog.findViewById(R.id.start_call);
         Button scan_again = dialog.findViewById(R.id.scan_again);
@@ -409,8 +409,6 @@ public class CallActivity extends AppCompatActivity
                 dialog.dismiss();
             }
         });
-        dialog = new Dialog(this, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
-//        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
     }
 
