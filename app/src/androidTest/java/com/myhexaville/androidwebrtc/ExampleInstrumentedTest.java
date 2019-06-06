@@ -1,4 +1,4 @@
-package com.myhexaville.androidwebrtc;
+package com.myhexaville.webrtcqrcode;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

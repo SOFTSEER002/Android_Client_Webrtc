@@ -1,4 +1,4 @@
-package com.myhexaville.androidwebrtc;
+package com.myhexaville.webrtcqrcode;
 
 import org.junit.Test;
 

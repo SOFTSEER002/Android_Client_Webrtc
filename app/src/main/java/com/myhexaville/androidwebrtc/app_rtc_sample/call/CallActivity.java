@@ -15,12 +15,9 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.graphics.Point;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.telecom.Call;
 import android.util.Log;
 import android.view.Display;
 import android.view.View;
@@ -28,7 +25,6 @@ import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.google.zxing.WriterException;
 import com.myhexaville.androidwebrtc.R;
@@ -90,7 +86,6 @@ public class CallActivity extends AppCompatActivity
     private AppRTCAudioManager audioManager;
     private EglBase rootEglBase;
     private final List<VideoRenderer.Callbacks> remoteRenderers = new ArrayList<>();
-    private Toast logToast;
     private boolean activityRunning;
 
     private RoomConnectionParameters roomConnectionParameters;
@@ -135,7 +130,6 @@ public class CallActivity extends AppCompatActivity
 
 
         if (roomId == null || roomId.length() == 0) {
-            logAndToast(getString(R.string.missing_url));
             Log.e(LOG_TAG, "Incorrect room ID in intent!");
             setResult(RESULT_CANCELED);
             finish();
@@ -257,9 +251,6 @@ public class CallActivity extends AppCompatActivity
     @Override
     protected void onDestroy() {
         disconnect();
-        if (logToast != null) {
-            logToast.cancel();
-        }
         activityRunning = false;
         rootEglBase.release();
         super.onDestroy();
@@ -318,8 +309,6 @@ public class CallActivity extends AppCompatActivity
 
         callStartedTimeMs = System.currentTimeMillis();
 
-        // Start room connection.
-        logAndToast(getString(R.string.connecting_to, roomConnectionParameters.roomUrl));
 
         appRtcClient.connectToRoom(roomConnectionParameters);
 
@@ -431,15 +420,7 @@ public class CallActivity extends AppCompatActivity
         }
     }
 
-    // Log |msg| and Toast about it.
-    private void logAndToast(String msg) {
-        Log.d(LOG_TAG, msg);
-        if (logToast != null) {
-            logToast.cancel();
-        }
-        logToast = Toast.makeText(this, msg, Toast.LENGTH_SHORT);
-        logToast.show();
-    }
+
 
     private void reportError(final String description) {
         runOnUiThread(() -> {
@@ -473,7 +454,6 @@ public class CallActivity extends AppCompatActivity
         final long delta = System.currentTimeMillis() - callStartedTimeMs;
 
         signalingParameters = params;
-        logAndToast("Creating peer connection, delay=" + delta + "ms");
         VideoCapturer videoCapturer = null;
         if (peerConnectionParameters.videoCallEnabled) {
             videoCapturer = createVideoCapturer();
@@ -482,14 +462,12 @@ public class CallActivity extends AppCompatActivity
                 remoteRenderers, videoCapturer, signalingParameters);
 
         if (signalingParameters.initiator) {
-            logAndToast("Creating OFFER...");
             // Create offer. Offer SDP will be sent to answering client in
             // PeerConnectionEvents.onLocalDescription event.
             peerConnectionClient.createOffer();
         } else {
             if (params.offerSdp != null) {
                 peerConnectionClient.setRemoteDescription(params.offerSdp);
-                logAndToast("Creating ANSWER...");
                 // Create answer. Answer SDP will be sent to offering client in
                 // PeerConnectionEvents.onLocalDescription event.
                 peerConnectionClient.createAnswer();
@@ -516,10 +494,8 @@ public class CallActivity extends AppCompatActivity
                 Log.e(LOG_TAG, "Received remote SDP for non-initilized peer connection.");
                 return;
             }
-            logAndToast("Received remote " + sdp.type + ", delay=" + delta + "ms");
             peerConnectionClient.setRemoteDescription(sdp);
             if (!signalingParameters.initiator) {
-                logAndToast("Creating ANSWER...");
                 // Create answer. Answer SDP will be sent to offering client in
                 // PeerConnectionEvents.onLocalDescription event.
                 peerConnectionClient.createAnswer();
@@ -552,7 +528,6 @@ public class CallActivity extends AppCompatActivity
     @Override
     public void onChannelClose() {
         runOnUiThread(() -> {
-            logAndToast("Remote end hung up; dropping PeerConnection");
             disconnect();
         });
     }
@@ -571,7 +546,6 @@ public class CallActivity extends AppCompatActivity
         final long delta = System.currentTimeMillis() - callStartedTimeMs;
         runOnUiThread(() -> {
             if (appRtcClient != null) {
-                logAndToast("Sending " + sdp.type + ", delay=" + delta + "ms");
                 if (signalingParameters.initiator) {
                     appRtcClient.sendOfferSdp(sdp);
                 } else {
@@ -607,7 +581,6 @@ public class CallActivity extends AppCompatActivity
     public void onIceConnected() {
         final long delta = System.currentTimeMillis() - callStartedTimeMs;
         runOnUiThread(() -> {
-            logAndToast("ICE connected, delay=" + delta + "ms");
             iceConnected = true;
             callConnected();
         });
@@ -616,7 +589,6 @@ public class CallActivity extends AppCompatActivity
     @Override
     public void onIceDisconnected() {
         runOnUiThread(() -> {
-            logAndToast("ICE disconnected");
             iceConnected = false;
             disconnect();
         });

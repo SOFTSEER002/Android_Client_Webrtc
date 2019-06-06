@@ -13,8 +13,8 @@ package com.myhexaville.androidwebrtc.app_rtc_sample.web_rtc;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.myhexaville.androidwebrtc.R;
 import com.myhexaville.androidwebrtc.app_rtc_sample.call.OnCallEvents;
+import com.myhexaville.androidwebrtc.R;
 
 import org.webrtc.CameraEnumerationAndroid.CaptureFormat;
 
