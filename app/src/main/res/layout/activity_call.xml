@@ -82,6 +82,7 @@
                 </LinearLayout>
 
                 <TextView
+                    android:visibility="gone"
                     android:id="@+id/capture_format_text_call"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

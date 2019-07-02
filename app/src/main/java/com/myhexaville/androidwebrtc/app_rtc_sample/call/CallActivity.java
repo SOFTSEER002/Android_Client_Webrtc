@@ -107,6 +107,7 @@ public class CallActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         getWindow().addFlags(LayoutParams.FLAG_DISMISS_KEYGUARD | LayoutParams.FLAG_SHOW_WHEN_LOCKED
                 | LayoutParams.FLAG_TURN_SCREEN_ON);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_call);
@@ -242,7 +243,7 @@ public class CallActivity extends AppCompatActivity
         Bundle args = getIntent().getExtras();
         if (args != null) {
             String contactName = args.getString(EXTRA_ROOMID);
-            binding.contactNameCall.setText(contactName);
+//            binding.contactNameCall.setText(contactName);
         }
         binding.captureFormatTextCall.setVisibility(View.GONE);
         binding.captureFormatSliderCall.setVisibility(View.GONE);
