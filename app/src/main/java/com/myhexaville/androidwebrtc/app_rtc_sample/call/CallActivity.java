@@ -281,9 +281,9 @@ public class CallActivity extends AppCompatActivity
     public boolean onToggleMic() {
         if (peerConnectionClient != null) {
             micEnabled = !micEnabled;
-            peerConnectionClient.setAudioEnabled(micEnabled);
+            peerConnectionClient.setAudioEnabled(true);
         }
-        return micEnabled;
+        return true;
     }
 
     private void updateVideoView() {
@@ -312,7 +312,6 @@ public class CallActivity extends AppCompatActivity
 
 
         appRtcClient.connectToRoom(roomConnectionParameters);
-
         // Create and audio manager that will take care of audio routing,
         // audio modes, audio device enumeration etc.
         audioManager = AppRTCAudioManager.create(this);
@@ -320,14 +319,19 @@ public class CallActivity extends AppCompatActivity
         // MODE_IN_COMMUNICATION for best possible VoIP performance.
         Log.d(LOG_TAG, "Starting the audio manager...");
         audioManager.start(this::onAudioManagerDevicesChanged);
+
     }
 
     // Should be called from UI thread
     private void callConnected() {
 //        dialog.dismiss();
         Log.e("room==>", roomId);
+        onToggleMic();
+
         final long delta = System.currentTimeMillis() - callStartedTimeMs;
         Log.i(LOG_TAG, "Call connected: delay=" + delta + "ms");
+//        audioManager.stop();
+
         if (peerConnectionClient == null || isError) {
             Log.w(LOG_TAG, "Call is connected in closed or error state");
             return;
@@ -420,7 +424,6 @@ public class CallActivity extends AppCompatActivity
                     .show();
         }
     }
-
 
 
     private void reportError(final String description) {

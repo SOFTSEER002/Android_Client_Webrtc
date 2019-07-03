@@ -36,7 +36,7 @@
     <string name="pref_videosettings_title">WebRTC video settings.</string>
 
     <string name="pref_videocall_key">videocall_preference</string>
-    <string name="pref_videocall_title">Video call.</string>
+    <string name="pref_videocall_title">Brazen</string>
     <string name="pref_videocall_dlg">Enable video in a call.</string>
     <string name="pref_videocall_default">true</string>
 
