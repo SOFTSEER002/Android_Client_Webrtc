@@ -14,7 +14,7 @@ import android.os.Bundle;
 import com.myhexaville.androidwebrtc.app_rtc_sample.main.AppRTCMainActivity;
 
 public class Splash extends AppCompatActivity {
-    int DELAYE_TIME = 4000;
+    int DELAYE_TIME = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
