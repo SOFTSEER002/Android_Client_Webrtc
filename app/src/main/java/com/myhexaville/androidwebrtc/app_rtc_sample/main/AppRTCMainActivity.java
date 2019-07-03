@@ -24,6 +24,7 @@ import android.util.Log;
 
 import com.google.zxing.Result;
 import com.myhexaville.androidwebrtc.R;
+import com.myhexaville.androidwebrtc.Splash;
 import com.myhexaville.androidwebrtc.app_rtc_sample.call.CallActivity;
 
 import java.util.Random;
@@ -53,6 +54,10 @@ public class AppRTCMainActivity extends Activity implements ZXingScannerView.Res
         super.onCreate(savedInstanceState);
         mScannerView = new ZXingScannerView(this);   // Programmatically initialize the scanner view
         setContentView(mScannerView);
+//        Checking that run is first time of the app or not
+        Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                .getBoolean("isFirstRun", true);
+
 
         //      Requesting Permission for the Camera
         if (ContextCompat.checkSelfPermission(AppRTCMainActivity.this,
@@ -66,8 +71,21 @@ public class AppRTCMainActivity extends Activity implements ZXingScannerView.Res
                 ActivityCompat.requestPermissions((Activity) AppRTCMainActivity.this,
                         new String[]{Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO},
                         200);
+                //      Condition for Checking isFirstRun or not
+                if (isFirstRun) {
+                    startActivity(new Intent(AppRTCMainActivity.this, Splash.class));
+                }
+                getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
+                        .putBoolean("isFirstRun", false).apply();
             }
 
+        } else {
+            //      Condition for Checking isFirstRun or not
+            if (isFirstRun) {
+                startActivity(new Intent(AppRTCMainActivity.this, Splash.class));
+            }
+            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
+                    .putBoolean("isFirstRun", false).apply();
         }
 //        setContentView(R.layout.activity_main);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);

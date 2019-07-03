@@ -296,8 +296,7 @@ public class CallActivity extends AppCompatActivity
                     LOCAL_X_CONNECTED, LOCAL_Y_CONNECTED, LOCAL_WIDTH_CONNECTED, LOCAL_HEIGHT_CONNECTED);
             binding.localVideoView.setScalingType(SCALE_ASPECT_FIT);
         } else {
-            binding.localVideoLayout.setPosition(
-                    LOCAL_X_CONNECTING, LOCAL_Y_CONNECTING, LOCAL_WIDTH_CONNECTING, LOCAL_HEIGHT_CONNECTING);
+            binding.localVideoLayout.setPosition(LOCAL_X_CONNECTING, LOCAL_Y_CONNECTING, LOCAL_WIDTH_CONNECTING, LOCAL_HEIGHT_CONNECTING);
             binding.localVideoView.setScalingType(SCALE_ASPECT_FILL);
         }
         binding.localVideoView.setMirror(true);
@@ -307,6 +306,7 @@ public class CallActivity extends AppCompatActivity
     }
 
     private void startCall() {
+
 
         callStartedTimeMs = System.currentTimeMillis();
 
