@@ -22,12 +22,6 @@ public abstract class ActivityCallBinding extends ViewDataBinding {
   public final ImageButton buttonCallDisconnect;
 
   @NonNull
-  public final ImageButton buttonCallSwitchCamera;
-
-  @NonNull
-  public final ImageButton buttonCallToggleMic;
-
-  @NonNull
   public final LinearLayout buttonsCallContainer;
 
   @NonNull
@@ -55,16 +49,13 @@ public abstract class ActivityCallBinding extends ViewDataBinding {
   public final SurfaceViewRenderer remoteVideoView;
 
   protected ActivityCallBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      ImageButton buttonCallDisconnect, ImageButton buttonCallSwitchCamera,
-      ImageButton buttonCallToggleMic, LinearLayout buttonsCallContainer,
+      ImageButton buttonCallDisconnect, LinearLayout buttonsCallContainer,
       FrameLayout callFragmentContainer, SeekBar captureFormatSliderCall,
       TextView captureFormatTextCall, TextView contactNameCall, PercentFrameLayout localVideoLayout,
       SurfaceViewRenderer localVideoView, PercentFrameLayout remoteVideoLayout,
       SurfaceViewRenderer remoteVideoView) {
     super(_bindingComponent, _root, _localFieldCount);
     this.buttonCallDisconnect = buttonCallDisconnect;
-    this.buttonCallSwitchCamera = buttonCallSwitchCamera;
-    this.buttonCallToggleMic = buttonCallToggleMic;
     this.buttonsCallContainer = buttonsCallContainer;
     this.callFragmentContainer = callFragmentContainer;
     this.captureFormatSliderCall = captureFormatSliderCall;
