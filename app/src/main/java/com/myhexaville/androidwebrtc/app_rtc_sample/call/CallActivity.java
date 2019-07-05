@@ -307,10 +307,7 @@ public class CallActivity extends AppCompatActivity
 
     private void startCall() {
 
-
         callStartedTimeMs = System.currentTimeMillis();
-
-
         appRtcClient.connectToRoom(roomConnectionParameters);
         // Create and audio manager that will take care of audio routing,
         // audio modes, audio device enumeration etc.
