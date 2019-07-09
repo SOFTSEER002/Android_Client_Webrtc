@@ -1,438 +1,438 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:2:1-76:12
-INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:2:1-76:12
-INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:2:1-76:12
-INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:2:1-76:12
-MERGED from [com.android.databinding:adapters:3.4.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/9b8b88d529767c3b174fcb400cb11d12/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.databinding:library:3.4.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/282f8b4a407231fb117b5fed4c974316/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/dfce0b9b31ff1b729620953dfb1eab8d/AndroidManifest.xml:2:1-11:12
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/c5750259d4a529d243d89e58b0634819/AndroidManifest.xml:15:1-21:12
-MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.17] /home/doozy/.gradle/caches/transforms-2/files-2.1/1a3c4f8c6afba22864e0e97dc914542c/AndroidManifest.xml:2:1-10:12
-MERGED from [com.android.support:design:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/e7230dadf90b010a6d684bf49ee02105/AndroidManifest.xml:17:1-24:12
-MERGED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:2:1-34:12
-MERGED from [pub.devrel:easypermissions:1.1.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/2bc832e3e0e7b6b9a09a8f0509e97b84/AndroidManifest.xml:2:1-19:12
-MERGED from [com.theartofdev.edmodo:android-image-cropper:2.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/d44c52a63ef046e03c9ede3c156a3f34/AndroidManifest.xml:2:1-12:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/1a1d5fdfb69a478ed21c0d15a300a860/AndroidManifest.xml:17:1-22:12
-MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:17:1-56:12
-MERGED from [me.dm7.barcodescanner:zbar:1.8.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/bcac65fdb3c03e62de3964252b81823f/AndroidManifest.xml:2:1-13:12
-MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /home/doozy/.gradle/caches/transforms-2/files-2.1/1d3b237f105dd57cecd8f3ca82347fdb/AndroidManifest.xml:2:1-13:12
-MERGED from [me.dm7.barcodescanner:core:1.9.13] /home/doozy/.gradle/caches/transforms-2/files-2.1/8dbea3268f534ea70cbec8ec11dbd55c/AndroidManifest.xml:2:1-13:12
-MERGED from [com.android.support:support-v4:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/66a1194ae91f63529b835ad63bab1528/AndroidManifest.xml:17:1-22:12
-MERGED from [androidmads.library.qrgenearator:QRGenearator:1.0.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/8f74209722ab356a5aac39dab681e96b/AndroidManifest.xml:2:1-16:12
-MERGED from [com.android.support:support-fragment:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/c237eb3f4baafe0323da776f254a9afb/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/2fa155563c2d4eef6dd0aba7cbda06e9/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/a63427786dbf90104dbaf4e728eaccfe/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/3da76e2cd6f02e97965f7dab6f770c0f/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/da83f62f5a334e2783b9e85e3b82ce77/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/f8da2886651fd14f7db1da4ac4747651/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/7879af7ee891b7572bb5c16afb934298/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07a72da313cab97712d1580413bd4382/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/c7e3a8596a32566f8cfdf791a810639e/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/fa443d17ff9be890ca81594fe9a21616/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/1a99a3d8c44c96b8f51d77b90204dcf5/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/0cefd26da0465014fb9f2da7424bd2dc/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/48a4c69e5222e5fbd06bb94c375157ae/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/fc18b1e32bd634099541867a785fcc62/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/ce0c9ab76e2e3ccb988136ed99b36d77/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/7e5faf34391ddff5f387aff0afa6793c/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/832688887291c07934a2c3e72025183b/AndroidManifest.xml:17:1-24:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/765e277a7130241c28cedcacd87718f9/AndroidManifest.xml:17:1-22:12
-MERGED from [pl.droidsonroids.relinker:relinker:1.3.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/b327ae342785818e824f03b2c0159880/AndroidManifest.xml:2:1-7:12
-MERGED from [com.android.support:cardview-v7:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/2ada66584412e9689fec671b027bcf95/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/1f91fe757c84a6c23caa356f35e66f2a/AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/6a7571025c7b992b3debc9380fc66f32/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/5d632f40a9f890bd9de6cc0876b85849/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/aaa2e66076e3b62e0c0dfb88d5f613f3/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/dc538b541f4b62137a60a48575947f75/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/c7f81d4f8bb1199ce2ffb71b08580c98/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/87a0f6d2bf0b330a953b6ec262821072/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:exifinterface:27.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/8ed7459c50756e0eb8bd48da38396115/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/dab41f20156de524611b39a0f7554453/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/2f82a7e23d989dcadec1a7868df351f9/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/008fef70f6035c9850a43522b3acb68c/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:2:1-76:12
-INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:2:1-76:12
-INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:2:1-76:12
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:2:1-76:12
+INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:2:1-76:12
+INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:2:1-76:12
+INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:2:1-76:12
+MERGED from [com.android.databinding:adapters:3.2.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\95701d35080591f7ba9b876bbeeb600a\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.databinding:library:3.2.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\45eb69f90be51e7093c84cedef0e0d09\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\e00fc8cb269625145188f5f325584cee\AndroidManifest.xml:2:1-11:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\c15853b16c02bc4929a1b17433cb8a03\AndroidManifest.xml:15:1-21:12
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.17] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\14ac7bb9937ac4e47aef560be6189196\AndroidManifest.xml:2:1-10:12
+MERGED from [com.android.support:design:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\f57324ae7fc163cf3e31fe37dcabf38b\AndroidManifest.xml:17:1-24:12
+MERGED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:2:1-34:12
+MERGED from [pub.devrel:easypermissions:1.1.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\7ba01644a1f83aaf85e742a2caa3d8d2\AndroidManifest.xml:2:1-19:12
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\cdbb06543fcc2d8f87c9f0fa3e6d82d9\AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\e2a267ef265afbf53ca3fb7c984f2adf\AndroidManifest.xml:17:1-22:12
+MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:17:1-56:12
+MERGED from [me.dm7.barcodescanner:zbar:1.8.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\4169b3efdd9677ec14e87e44599c96ab\AndroidManifest.xml:2:1-13:12
+MERGED from [me.dm7.barcodescanner:zxing:1.9.13] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\83253900a4e84dd4e326fc3a4394de93\AndroidManifest.xml:2:1-13:12
+MERGED from [me.dm7.barcodescanner:core:1.9.13] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\f7fa4b9ed2c85a35e7c86531c2ec923a\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\40d71e11f28ca1ce2aac41301bf76aa8\AndroidManifest.xml:17:1-22:12
+MERGED from [androidmads.library.qrgenearator:QRGenearator:1.0.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\5e193ce1f558bff2c86b8d75e8498ac7\AndroidManifest.xml:2:1-16:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\0290d78f67fbae953cf819d50529ae07\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\9ca79d90001f722537aec08ba8c866ae\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\6f262355441c63311a2c6d18430f27ab\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\3cdadb1000e44eb1660f4b8686484e21\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\5867c0c88522752933e40d7a6f9c6288\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\04fcca17e66ab2b896301fa692d960d8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\23bbc886d842fee53d18042512358284\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\d82806a09ba73a14227427c8ab5deb55\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\12b2c5a5d88310e4c8b8c5eee7762149\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\d4bc859a8fe6d70c7c6faf72d1b65216\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\29f61dd2ed99aeefc4276117cd41d675\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\453066d568e3907e7fe02fd0e8da9c47\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\d969f031fe2010efec3887a155e17005\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\85501506133fa68debf4f33b12bafd13\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\a0968fcf7869adad7accbded30862d52\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\7e35857207331fc992dd2b5f1b649992\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\c12b7e4abf30c2f4ea74299f2a20d4d2\AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\e53a9e0ced9dd5bdc0ecd0758f0783e1\AndroidManifest.xml:17:1-22:12
+MERGED from [pl.droidsonroids.relinker:relinker:1.3.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\0f31f24c90790f756c5f6d6cc39c2e78\AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\9579f4b0c780aebfe8eb0c596c60880a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\364554c90d49acd4d4bbb6501f23f2bb\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\9e46e1d55a2aaeb2c325e1beac2d7bd1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\4d2d929d9c24ed37f456730b28f88780\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\ade872142ea901a0659a6291d768d51b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\855d63e733effcf57f44d6daf86048e7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\a21b74ec719b19e260508a3f0d9b2431\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\96953881ab8244aa18ad3b9d72d678b2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:exifinterface:27.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\ad79b101515d4ea79ff4061ca1ba597e\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\25b8fc7f66add357a6847e3d44cafd91\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\94718c6bc5c6ef588631cb5b8679c5b9\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\60458b50561d8192c834e87252e39254\AndroidManifest.xml:17:1-22:12
+INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:2:1-76:12
+INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:2:1-76:12
+INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:2:1-76:12
 	package
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:4:5-44
-		INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml
-		INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:4:5-44
+		INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:2:1-76:12
-		INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml
+		INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:2:1-76:12
+		INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:3:5-51
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:2:1-76:12
-		INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml
+		INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:2:1-76:12
+		INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:2:11-69
 uses-feature#android.hardware.camera
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:6:5-60
-MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:25:5-27:36
-MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:25:5-27:36
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:6:5-60
+MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:25:5-27:36
+MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:25:5-27:36
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:6:19-57
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:6:19-57
 uses-feature#android.hardware.camera.autofocus
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:7:5-70
-MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:33:5-35:36
-MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:33:5-35:36
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:7:5-70
+MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:33:5-35:36
+MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:33:5-35:36
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:7:19-67
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:7:19-67
 uses-feature#0x00020000
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:8:5-10:35
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:8:5-10:35
 	android:glEsVersion
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:9:9-41
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:9:9-41
 	android:required
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:10:9-32
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:10:9-32
 uses-permission#android.permission.CAMERA
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:12:5-65
-MERGED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:11:5-65
-MERGED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:11:5-65
-MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:22:5-65
-MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:22:5-65
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:12:5-65
+MERGED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:11:5-65
+MERGED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:11:5-65
+MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:22:5-65
+MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:22:5-65
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:12:22-62
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:12:22-62
 uses-permission#android.permission.CHANGE_NETWORK_STATE
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:13:5-79
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:13:5-79
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:13:22-76
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:13:22-76
 uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:14:5-80
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:14:5-80
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:14:22-77
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:14:22-77
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:15:5-71
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:15:5-71
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:15:22-68
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:15:22-68
 uses-permission#android.permission.INTERNET
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:16:5-67
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:16:5-67
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:16:22-64
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:16:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:17:5-81
-MERGED from [androidmads.library.qrgenearator:QRGenearator:1.0.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/8f74209722ab356a5aac39dab681e96b/AndroidManifest.xml:11:5-81
-MERGED from [androidmads.library.qrgenearator:QRGenearator:1.0.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/8f74209722ab356a5aac39dab681e96b/AndroidManifest.xml:11:5-81
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:17:5-81
+MERGED from [androidmads.library.qrgenearator:QRGenearator:1.0.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\5e193ce1f558bff2c86b8d75e8498ac7\AndroidManifest.xml:11:5-81
+MERGED from [androidmads.library.qrgenearator:QRGenearator:1.0.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\5e193ce1f558bff2c86b8d75e8498ac7\AndroidManifest.xml:11:5-81
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:17:22-78
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:17:22-78
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:18:5-79
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:18:5-79
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:18:22-76
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:18:22-76
 uses-permission#android.permission.BLUETOOTH
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:19:5-68
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:19:5-68
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:19:22-65
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:19:22-65
 application
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:21:5-74:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/dfce0b9b31ff1b729620953dfb1eab8d/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/dfce0b9b31ff1b729620953dfb1eab8d/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:design:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/e7230dadf90b010a6d684bf49ee02105/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/e7230dadf90b010a6d684bf49ee02105/AndroidManifest.xml:22:5-20
-MERGED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:14:5-32:19
-MERGED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:14:5-32:19
-MERGED from [pub.devrel:easypermissions:1.1.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/2bc832e3e0e7b6b9a09a8f0509e97b84/AndroidManifest.xml:11:5-17:19
-MERGED from [pub.devrel:easypermissions:1.1.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/2bc832e3e0e7b6b9a09a8f0509e97b84/AndroidManifest.xml:11:5-17:19
-MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:46:5-54:19
-MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:46:5-54:19
-MERGED from [me.dm7.barcodescanner:zbar:1.8.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/bcac65fdb3c03e62de3964252b81823f/AndroidManifest.xml:11:5-20
-MERGED from [me.dm7.barcodescanner:zbar:1.8.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/bcac65fdb3c03e62de3964252b81823f/AndroidManifest.xml:11:5-20
-MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /home/doozy/.gradle/caches/transforms-2/files-2.1/1d3b237f105dd57cecd8f3ca82347fdb/AndroidManifest.xml:11:5-20
-MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /home/doozy/.gradle/caches/transforms-2/files-2.1/1d3b237f105dd57cecd8f3ca82347fdb/AndroidManifest.xml:11:5-20
-MERGED from [me.dm7.barcodescanner:core:1.9.13] /home/doozy/.gradle/caches/transforms-2/files-2.1/8dbea3268f534ea70cbec8ec11dbd55c/AndroidManifest.xml:11:5-20
-MERGED from [me.dm7.barcodescanner:core:1.9.13] /home/doozy/.gradle/caches/transforms-2/files-2.1/8dbea3268f534ea70cbec8ec11dbd55c/AndroidManifest.xml:11:5-20
-MERGED from [androidmads.library.qrgenearator:QRGenearator:1.0.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/8f74209722ab356a5aac39dab681e96b/AndroidManifest.xml:13:5-14:19
-MERGED from [androidmads.library.qrgenearator:QRGenearator:1.0.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/8f74209722ab356a5aac39dab681e96b/AndroidManifest.xml:13:5-14:19
-MERGED from [com.android.support:support-compat:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/832688887291c07934a2c3e72025183b/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/832688887291c07934a2c3e72025183b/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/1f91fe757c84a6c23caa356f35e66f2a/AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/1f91fe757c84a6c23caa356f35e66f2a/AndroidManifest.xml:22:5-23:19
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:21:5-74:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\e00fc8cb269625145188f5f325584cee\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\e00fc8cb269625145188f5f325584cee\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\f57324ae7fc163cf3e31fe37dcabf38b\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\f57324ae7fc163cf3e31fe37dcabf38b\AndroidManifest.xml:22:5-20
+MERGED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:14:5-32:19
+MERGED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:14:5-32:19
+MERGED from [pub.devrel:easypermissions:1.1.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\7ba01644a1f83aaf85e742a2caa3d8d2\AndroidManifest.xml:11:5-17:19
+MERGED from [pub.devrel:easypermissions:1.1.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\7ba01644a1f83aaf85e742a2caa3d8d2\AndroidManifest.xml:11:5-17:19
+MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:46:5-54:19
+MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:46:5-54:19
+MERGED from [me.dm7.barcodescanner:zbar:1.8.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\4169b3efdd9677ec14e87e44599c96ab\AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:zbar:1.8.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\4169b3efdd9677ec14e87e44599c96ab\AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:zxing:1.9.13] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\83253900a4e84dd4e326fc3a4394de93\AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:zxing:1.9.13] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\83253900a4e84dd4e326fc3a4394de93\AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:core:1.9.13] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\f7fa4b9ed2c85a35e7c86531c2ec923a\AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:core:1.9.13] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\f7fa4b9ed2c85a35e7c86531c2ec923a\AndroidManifest.xml:11:5-20
+MERGED from [androidmads.library.qrgenearator:QRGenearator:1.0.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\5e193ce1f558bff2c86b8d75e8498ac7\AndroidManifest.xml:13:5-14:19
+MERGED from [androidmads.library.qrgenearator:QRGenearator:1.0.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\5e193ce1f558bff2c86b8d75e8498ac7\AndroidManifest.xml:13:5-14:19
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\c12b7e4abf30c2f4ea74299f2a20d4d2\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\c12b7e4abf30c2f4ea74299f2a20d4d2\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\364554c90d49acd4d4bbb6501f23f2bb\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\364554c90d49acd4d4bbb6501f23f2bb\AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/832688887291c07934a2c3e72025183b/AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\c12b7e4abf30c2f4ea74299f2a20d4d2\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:26:9-35
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:26:9-35
 	android:label
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:25:9-41
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:25:9-41
 	android:hardwareAccelerated
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:23:9-43
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:23:9-43
 	tools:ignore
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:29:9-48
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:29:9-48
 	android:icon
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:24:9-43
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:24:9-43
 	android:allowBackup
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:22:9-35
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:22:9-35
 	android:theme
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:27:9-40
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:27:9-40
 	android:usesCleartextTraffic
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:28:9-44
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:28:9-44
 activity#com.myhexaville.androidwebrtc.Splash
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:30:9-34:20
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:30:9-34:20
 	android:theme
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:32:13-56
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:32:13-56
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:31:13-35
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:31:13-35
 activity#com.myhexaville.androidwebrtc.app_rtc_sample.call.CallActivity
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:35:9-40:52
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:35:9-40:52
 	android:screenOrientation
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:39:13-49
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:39:13-49
 	android:label
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:38:13-45
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:38:13-45
 	android:configChanges
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:37:13-59
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:37:13-59
 	android:theme
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:40:13-49
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:40:13-49
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:36:13-61
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:36:13-61
 activity#com.myhexaville.androidwebrtc.app_rtc_sample.main.AppRTCMainActivity
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:41:9-57:20
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:41:9-57:20
 	android:screenOrientation
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:44:13-49
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:44:13-49
 	android:stateNotNeeded
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:45:13-42
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:45:13-42
 	android:label
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:43:13-39
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:43:13-39
 	android:theme
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:46:13-56
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:46:13-56
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:42:13-67
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:42:13-67
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:47:13-51:29
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:47:13-51:29
 	android:label
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:47:28-60
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:47:28-60
 action#android.intent.action.MAIN
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:49:17-69
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:49:17-69
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:49:25-66
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:49:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:50:17-77
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:50:17-77
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:50:27-74
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:50:27-74
 intent-filter#action:name:com.google.zxing.client.android.SCAN+category:name:android.intent.category.DEFAULT
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:52:13-56:29
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:52:13-56:29
 action#com.google.zxing.client.android.SCAN
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:53:17-79
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:53:17-79
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:53:25-76
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:53:25-76
 category#android.intent.category.DEFAULT
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:55:17-76
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:55:17-76
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:55:27-73
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:55:27-73
 activity#com.myhexaville.androidwebrtc.tutorial.CameraRenderActivity
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:58:9-61:59
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:58:9-61:59
 	android:label
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:60:13-45
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:60:13-45
 	android:theme
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:61:13-56
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:61:13-56
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:59:13-58
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:59:13-58
 activity#com.myhexaville.androidwebrtc.tutorial.MediaStreamActivity
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:62:9-65:59
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:62:9-65:59
 	android:label
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:64:13-74
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:64:13-74
 	android:theme
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:65:13-56
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:65:13-56
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:63:13-57
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:63:13-57
 activity#com.myhexaville.androidwebrtc.tutorial.DataChannelActivity
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:66:9-69:59
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:66:9-69:59
 	android:label
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:68:13-71
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:68:13-71
 	android:theme
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:69:13-56
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:69:13-56
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:67:13-57
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:67:13-57
 activity#com.myhexaville.androidwebrtc.tutorial.CompleteActivity
-ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:70:9-73:59
+ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:70:9-73:59
 	android:label
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:72:13-60
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:72:13-60
 	android:theme
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:73:13-56
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:73:13-56
 	android:name
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml:71:13-54
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml:71:13-54
 uses-sdk
-INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml
-INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml
-MERGED from [com.android.databinding:adapters:3.4.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/9b8b88d529767c3b174fcb400cb11d12/AndroidManifest.xml:22:5-44
-MERGED from [com.android.databinding:adapters:3.4.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/9b8b88d529767c3b174fcb400cb11d12/AndroidManifest.xml:22:5-44
-MERGED from [com.android.databinding:library:3.4.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/282f8b4a407231fb117b5fed4c974316/AndroidManifest.xml:22:5-44
-MERGED from [com.android.databinding:library:3.4.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/282f8b4a407231fb117b5fed4c974316/AndroidManifest.xml:22:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/dfce0b9b31ff1b729620953dfb1eab8d/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/dfce0b9b31ff1b729620953dfb1eab8d/AndroidManifest.xml:5:5-7:41
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/c5750259d4a529d243d89e58b0634819/AndroidManifest.xml:19:5-43
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/c5750259d4a529d243d89e58b0634819/AndroidManifest.xml:19:5-43
-MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.17] /home/doozy/.gradle/caches/transforms-2/files-2.1/1a3c4f8c6afba22864e0e97dc914542c/AndroidManifest.xml:6:5-8:41
-MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.17] /home/doozy/.gradle/caches/transforms-2/files-2.1/1a3c4f8c6afba22864e0e97dc914542c/AndroidManifest.xml:6:5-8:41
-MERGED from [com.android.support:design:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/e7230dadf90b010a6d684bf49ee02105/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/e7230dadf90b010a6d684bf49ee02105/AndroidManifest.xml:20:5-44
-MERGED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:7:5-9:41
-MERGED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:7:5-9:41
-MERGED from [pub.devrel:easypermissions:1.1.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/2bc832e3e0e7b6b9a09a8f0509e97b84/AndroidManifest.xml:7:5-9:41
-MERGED from [pub.devrel:easypermissions:1.1.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/2bc832e3e0e7b6b9a09a8f0509e97b84/AndroidManifest.xml:7:5-9:41
-MERGED from [com.theartofdev.edmodo:android-image-cropper:2.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/d44c52a63ef046e03c9ede3c156a3f34/AndroidManifest.xml:8:5-10:41
-MERGED from [com.theartofdev.edmodo:android-image-cropper:2.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/d44c52a63ef046e03c9ede3c156a3f34/AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:appcompat-v7:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/1a1d5fdfb69a478ed21c0d15a300a860/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/1a1d5fdfb69a478ed21c0d15a300a860/AndroidManifest.xml:20:5-44
-MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:20:5-44
-MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:20:5-44
-MERGED from [me.dm7.barcodescanner:zbar:1.8.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/bcac65fdb3c03e62de3964252b81823f/AndroidManifest.xml:7:5-9:41
-MERGED from [me.dm7.barcodescanner:zbar:1.8.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/bcac65fdb3c03e62de3964252b81823f/AndroidManifest.xml:7:5-9:41
-MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /home/doozy/.gradle/caches/transforms-2/files-2.1/1d3b237f105dd57cecd8f3ca82347fdb/AndroidManifest.xml:7:5-9:41
-MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /home/doozy/.gradle/caches/transforms-2/files-2.1/1d3b237f105dd57cecd8f3ca82347fdb/AndroidManifest.xml:7:5-9:41
-MERGED from [me.dm7.barcodescanner:core:1.9.13] /home/doozy/.gradle/caches/transforms-2/files-2.1/8dbea3268f534ea70cbec8ec11dbd55c/AndroidManifest.xml:7:5-9:41
-MERGED from [me.dm7.barcodescanner:core:1.9.13] /home/doozy/.gradle/caches/transforms-2/files-2.1/8dbea3268f534ea70cbec8ec11dbd55c/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-v4:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/66a1194ae91f63529b835ad63bab1528/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/66a1194ae91f63529b835ad63bab1528/AndroidManifest.xml:20:5-44
-MERGED from [androidmads.library.qrgenearator:QRGenearator:1.0.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/8f74209722ab356a5aac39dab681e96b/AndroidManifest.xml:7:5-9:41
-MERGED from [androidmads.library.qrgenearator:QRGenearator:1.0.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/8f74209722ab356a5aac39dab681e96b/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-fragment:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/c237eb3f4baafe0323da776f254a9afb/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/c237eb3f4baafe0323da776f254a9afb/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/2fa155563c2d4eef6dd0aba7cbda06e9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/2fa155563c2d4eef6dd0aba7cbda06e9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/a63427786dbf90104dbaf4e728eaccfe/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/a63427786dbf90104dbaf4e728eaccfe/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/3da76e2cd6f02e97965f7dab6f770c0f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/3da76e2cd6f02e97965f7dab6f770c0f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/da83f62f5a334e2783b9e85e3b82ce77/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/da83f62f5a334e2783b9e85e3b82ce77/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/f8da2886651fd14f7db1da4ac4747651/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/f8da2886651fd14f7db1da4ac4747651/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/7879af7ee891b7572bb5c16afb934298/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/7879af7ee891b7572bb5c16afb934298/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07a72da313cab97712d1580413bd4382/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07a72da313cab97712d1580413bd4382/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/c7e3a8596a32566f8cfdf791a810639e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/c7e3a8596a32566f8cfdf791a810639e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/fa443d17ff9be890ca81594fe9a21616/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/fa443d17ff9be890ca81594fe9a21616/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/1a99a3d8c44c96b8f51d77b90204dcf5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/1a99a3d8c44c96b8f51d77b90204dcf5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/0cefd26da0465014fb9f2da7424bd2dc/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/0cefd26da0465014fb9f2da7424bd2dc/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/48a4c69e5222e5fbd06bb94c375157ae/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/48a4c69e5222e5fbd06bb94c375157ae/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/fc18b1e32bd634099541867a785fcc62/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/fc18b1e32bd634099541867a785fcc62/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/ce0c9ab76e2e3ccb988136ed99b36d77/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/ce0c9ab76e2e3ccb988136ed99b36d77/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/7e5faf34391ddff5f387aff0afa6793c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/7e5faf34391ddff5f387aff0afa6793c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/832688887291c07934a2c3e72025183b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/832688887291c07934a2c3e72025183b/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/765e277a7130241c28cedcacd87718f9/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/765e277a7130241c28cedcacd87718f9/AndroidManifest.xml:20:5-44
-MERGED from [pl.droidsonroids.relinker:relinker:1.3.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/b327ae342785818e824f03b2c0159880/AndroidManifest.xml:5:5-43
-MERGED from [pl.droidsonroids.relinker:relinker:1.3.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/b327ae342785818e824f03b2c0159880/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:cardview-v7:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/2ada66584412e9689fec671b027bcf95/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/2ada66584412e9689fec671b027bcf95/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/1f91fe757c84a6c23caa356f35e66f2a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/1f91fe757c84a6c23caa356f35e66f2a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/6a7571025c7b992b3debc9380fc66f32/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/6a7571025c7b992b3debc9380fc66f32/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/5d632f40a9f890bd9de6cc0876b85849/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/5d632f40a9f890bd9de6cc0876b85849/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/aaa2e66076e3b62e0c0dfb88d5f613f3/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/aaa2e66076e3b62e0c0dfb88d5f613f3/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/dc538b541f4b62137a60a48575947f75/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/dc538b541f4b62137a60a48575947f75/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/c7f81d4f8bb1199ce2ffb71b08580c98/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/c7f81d4f8bb1199ce2ffb71b08580c98/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/87a0f6d2bf0b330a953b6ec262821072/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/87a0f6d2bf0b330a953b6ec262821072/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:exifinterface:27.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/8ed7459c50756e0eb8bd48da38396115/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:exifinterface:27.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/8ed7459c50756e0eb8bd48da38396115/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/dab41f20156de524611b39a0f7554453/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/dab41f20156de524611b39a0f7554453/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/2f82a7e23d989dcadec1a7868df351f9/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/2f82a7e23d989dcadec1a7868df351f9/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/008fef70f6035c9850a43522b3acb68c/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /home/doozy/.gradle/caches/transforms-2/files-2.1/008fef70f6035c9850a43522b3acb68c/AndroidManifest.xml:20:5-44
-INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml
-INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml
+INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml
+INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml
+MERGED from [com.android.databinding:adapters:3.2.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\95701d35080591f7ba9b876bbeeb600a\AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:adapters:3.2.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\95701d35080591f7ba9b876bbeeb600a\AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.2.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\45eb69f90be51e7093c84cedef0e0d09\AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.2.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\45eb69f90be51e7093c84cedef0e0d09\AndroidManifest.xml:22:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\e00fc8cb269625145188f5f325584cee\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\e00fc8cb269625145188f5f325584cee\AndroidManifest.xml:5:5-7:41
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\c15853b16c02bc4929a1b17433cb8a03\AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\c15853b16c02bc4929a1b17433cb8a03\AndroidManifest.xml:19:5-43
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.17] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\14ac7bb9937ac4e47aef560be6189196\AndroidManifest.xml:6:5-8:41
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.17] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\14ac7bb9937ac4e47aef560be6189196\AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.support:design:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\f57324ae7fc163cf3e31fe37dcabf38b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\f57324ae7fc163cf3e31fe37dcabf38b\AndroidManifest.xml:20:5-44
+MERGED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:7:5-9:41
+MERGED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:7:5-9:41
+MERGED from [pub.devrel:easypermissions:1.1.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\7ba01644a1f83aaf85e742a2caa3d8d2\AndroidManifest.xml:7:5-9:41
+MERGED from [pub.devrel:easypermissions:1.1.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\7ba01644a1f83aaf85e742a2caa3d8d2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\cdbb06543fcc2d8f87c9f0fa3e6d82d9\AndroidManifest.xml:8:5-10:41
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\cdbb06543fcc2d8f87c9f0fa3e6d82d9\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\e2a267ef265afbf53ca3fb7c984f2adf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\e2a267ef265afbf53ca3fb7c984f2adf\AndroidManifest.xml:20:5-44
+MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:20:5-44
+MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:20:5-44
+MERGED from [me.dm7.barcodescanner:zbar:1.8.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\4169b3efdd9677ec14e87e44599c96ab\AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:zbar:1.8.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\4169b3efdd9677ec14e87e44599c96ab\AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:zxing:1.9.13] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\83253900a4e84dd4e326fc3a4394de93\AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:zxing:1.9.13] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\83253900a4e84dd4e326fc3a4394de93\AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:core:1.9.13] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\f7fa4b9ed2c85a35e7c86531c2ec923a\AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:core:1.9.13] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\f7fa4b9ed2c85a35e7c86531c2ec923a\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\40d71e11f28ca1ce2aac41301bf76aa8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\40d71e11f28ca1ce2aac41301bf76aa8\AndroidManifest.xml:20:5-44
+MERGED from [androidmads.library.qrgenearator:QRGenearator:1.0.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\5e193ce1f558bff2c86b8d75e8498ac7\AndroidManifest.xml:7:5-9:41
+MERGED from [androidmads.library.qrgenearator:QRGenearator:1.0.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\5e193ce1f558bff2c86b8d75e8498ac7\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\0290d78f67fbae953cf819d50529ae07\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\0290d78f67fbae953cf819d50529ae07\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\9ca79d90001f722537aec08ba8c866ae\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\9ca79d90001f722537aec08ba8c866ae\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\6f262355441c63311a2c6d18430f27ab\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\6f262355441c63311a2c6d18430f27ab\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\3cdadb1000e44eb1660f4b8686484e21\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\3cdadb1000e44eb1660f4b8686484e21\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\5867c0c88522752933e40d7a6f9c6288\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\5867c0c88522752933e40d7a6f9c6288\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\04fcca17e66ab2b896301fa692d960d8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\04fcca17e66ab2b896301fa692d960d8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\23bbc886d842fee53d18042512358284\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\23bbc886d842fee53d18042512358284\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\d82806a09ba73a14227427c8ab5deb55\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\d82806a09ba73a14227427c8ab5deb55\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\12b2c5a5d88310e4c8b8c5eee7762149\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\12b2c5a5d88310e4c8b8c5eee7762149\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\d4bc859a8fe6d70c7c6faf72d1b65216\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\d4bc859a8fe6d70c7c6faf72d1b65216\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\29f61dd2ed99aeefc4276117cd41d675\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\29f61dd2ed99aeefc4276117cd41d675\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\453066d568e3907e7fe02fd0e8da9c47\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\453066d568e3907e7fe02fd0e8da9c47\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\d969f031fe2010efec3887a155e17005\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\d969f031fe2010efec3887a155e17005\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\85501506133fa68debf4f33b12bafd13\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\85501506133fa68debf4f33b12bafd13\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\a0968fcf7869adad7accbded30862d52\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\a0968fcf7869adad7accbded30862d52\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\7e35857207331fc992dd2b5f1b649992\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\7e35857207331fc992dd2b5f1b649992\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\c12b7e4abf30c2f4ea74299f2a20d4d2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\c12b7e4abf30c2f4ea74299f2a20d4d2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\e53a9e0ced9dd5bdc0ecd0758f0783e1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\e53a9e0ced9dd5bdc0ecd0758f0783e1\AndroidManifest.xml:20:5-44
+MERGED from [pl.droidsonroids.relinker:relinker:1.3.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\0f31f24c90790f756c5f6d6cc39c2e78\AndroidManifest.xml:5:5-43
+MERGED from [pl.droidsonroids.relinker:relinker:1.3.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\0f31f24c90790f756c5f6d6cc39c2e78\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\9579f4b0c780aebfe8eb0c596c60880a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\9579f4b0c780aebfe8eb0c596c60880a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\364554c90d49acd4d4bbb6501f23f2bb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\364554c90d49acd4d4bbb6501f23f2bb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\9e46e1d55a2aaeb2c325e1beac2d7bd1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\9e46e1d55a2aaeb2c325e1beac2d7bd1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\4d2d929d9c24ed37f456730b28f88780\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\4d2d929d9c24ed37f456730b28f88780\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\ade872142ea901a0659a6291d768d51b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\ade872142ea901a0659a6291d768d51b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\855d63e733effcf57f44d6daf86048e7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\855d63e733effcf57f44d6daf86048e7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\a21b74ec719b19e260508a3f0d9b2431\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\a21b74ec719b19e260508a3f0d9b2431\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\96953881ab8244aa18ad3b9d72d678b2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\96953881ab8244aa18ad3b9d72d678b2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\ad79b101515d4ea79ff4061ca1ba597e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\ad79b101515d4ea79ff4061ca1ba597e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\25b8fc7f66add357a6847e3d44cafd91\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\25b8fc7f66add357a6847e3d44cafd91\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\94718c6bc5c6ef588631cb5b8679c5b9\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\94718c6bc5c6ef588631cb5b8679c5b9\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\60458b50561d8192c834e87252e39254\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\60458b50561d8192c834e87252e39254\AndroidManifest.xml:20:5-44
+INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml
+INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml
-		INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml
+		INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml
-		ADDED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml
-		INJECTED from /home/doozy/Documents/AndroidProjects/WebRtc/app/src/main/AndroidManifest.xml
+		INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml
+		ADDED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Android_Client_Webrtc\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:12:5-80
+ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:12:5-80
 	android:name
-		ADDED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:12:22-77
+		ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:12:22-77
 activity#com.theartofdev.edmodo.cropper.CropImageActivity
-ADDED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:18:9-21:47
+ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:18:9-21:47
 	android:screenOrientation
-		ADDED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:20:13-49
+		ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:20:13-49
 	android:theme
-		ADDED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:21:13-44
+		ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:21:13-44
 	android:name
-		ADDED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:19:13-76
+		ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:19:13-76
 provider#com.myhexaville.smartimagepicker.CustomFileProvider
-ADDED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:23:9-31:20
+ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:23:9-31:20
 	android:grantUriPermissions
-		ADDED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:27:13-47
+		ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:27:13-47
 	android:authorities
-		ADDED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:25:13-79
+		ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:25:13-79
 	android:exported
-		ADDED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:26:13-37
+		ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:24:13-79
+		ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:24:13-79
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:28:13-30:54
+ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:28:13-30:54
 	android:resource
-		ADDED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:30:17-51
+		ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:30:17-51
 	android:name
-		ADDED from [com.myhexaville:smart-image-picker:1.0.4] /home/doozy/.gradle/caches/transforms-2/files-2.1/b21141ca5d92b26c05f466ad5690b519/AndroidManifest.xml:29:17-67
+		ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b7dae740238e22fb3c04a38e889c0d21\AndroidManifest.xml:29:17-67
 activity#pub.devrel.easypermissions.AppSettingsDialogHolderActivity
-ADDED from [pub.devrel:easypermissions:1.1.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/2bc832e3e0e7b6b9a09a8f0509e97b84/AndroidManifest.xml:12:9-16:66
+ADDED from [pub.devrel:easypermissions:1.1.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\7ba01644a1f83aaf85e742a2caa3d8d2\AndroidManifest.xml:12:9-16:66
 	android:label
-		ADDED from [pub.devrel:easypermissions:1.1.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/2bc832e3e0e7b6b9a09a8f0509e97b84/AndroidManifest.xml:15:13-29
+		ADDED from [pub.devrel:easypermissions:1.1.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\7ba01644a1f83aaf85e742a2caa3d8d2\AndroidManifest.xml:15:13-29
 	android:exported
-		ADDED from [pub.devrel:easypermissions:1.1.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/2bc832e3e0e7b6b9a09a8f0509e97b84/AndroidManifest.xml:14:13-37
+		ADDED from [pub.devrel:easypermissions:1.1.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\7ba01644a1f83aaf85e742a2caa3d8d2\AndroidManifest.xml:14:13-37
 	android:theme
-		ADDED from [pub.devrel:easypermissions:1.1.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/2bc832e3e0e7b6b9a09a8f0509e97b84/AndroidManifest.xml:16:13-63
+		ADDED from [pub.devrel:easypermissions:1.1.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\7ba01644a1f83aaf85e742a2caa3d8d2\AndroidManifest.xml:16:13-63
 	android:name
-		ADDED from [pub.devrel:easypermissions:1.1.3] /home/doozy/.gradle/caches/transforms-2/files-2.1/2bc832e3e0e7b6b9a09a8f0509e97b84/AndroidManifest.xml:13:13-86
+		ADDED from [pub.devrel:easypermissions:1.1.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\7ba01644a1f83aaf85e742a2caa3d8d2\AndroidManifest.xml:13:13-86
 uses-feature#android.hardware.camera.front
-ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:28:5-30:36
+ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:28:5-30:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:30:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:30:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:29:9-53
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:29:9-53
 uses-feature#android.hardware.camera.flash
-ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:36:5-38:36
+ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:36:5-38:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:38:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:38:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:37:9-53
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:37:9-53
 uses-feature#android.hardware.screen.landscape
-ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:39:5-41:36
+ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:39:5-41:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:41:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:41:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:40:9-57
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:40:9-57
 uses-feature#android.hardware.wifi
-ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:42:5-44:36
+ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:42:5-44:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:44:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:44:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:43:9-45
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:43:9-45
 activity#com.journeyapps.barcodescanner.CaptureActivity
-ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:47:9-53:63
+ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:47:9-53:63
 	android:screenOrientation
-		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:50:13-56
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:50:13-56
 	android:clearTaskOnLaunch
-		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:49:13-45
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:49:13-45
 	android:stateNotNeeded
-		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:51:13-42
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:51:13-42
 	android:windowSoftInputMode
-		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:53:13-60
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:53:13-60
 	android:theme
-		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:52:13-54
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:52:13-54
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /home/doozy/.gradle/caches/transforms-2/files-2.1/07b660b61f96d9a9e5f90f234a7fd3c9/AndroidManifest.xml:48:13-74
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\51019943000029e1e9059f67d2f0bb96\AndroidManifest.xml:48:13-74

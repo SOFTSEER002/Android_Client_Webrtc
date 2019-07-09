@@ -281,6 +281,8 @@ public class PeerConnectionClient {
          * Callback fired once peer connection error happened.
          */
         void onPeerConnectionError(final String description);
+
+        void onReceivedData(final String command);
     }
 
     private PeerConnectionClient() {
@@ -543,6 +545,39 @@ public class PeerConnectionClient {
             dataChannel = peerConnection.createDataChannel("ApprtcDemo data", init);
         }
         isInitiator = false;
+
+        DataChannel.Init dcInit = new DataChannel.Init();
+        dcInit.id = 1;
+        dataChannel = peerConnection.createDataChannel("1", dcInit);;
+        dataChannel.registerObserver(new DataChannel.Observer() {
+
+            @Override
+            public void onMessage(final DataChannel.Buffer buffer) {
+
+                ByteBuffer data = buffer.data;
+                byte[] bytes = new byte[data.remaining()];
+                data.get(bytes);
+                final String command = new String(bytes);
+
+                executor.execute(new Runnable() {
+                    public void run() {
+                        events.onReceivedData(command);
+                    }
+                });
+
+            }
+
+            @Override
+            public void onBufferedAmountChange(long l) {
+
+            }
+
+            @Override
+            public void onStateChange() {
+               // Log.d(TAG, "DataChannel: onStateChange: " + dataChannel.state());
+            }
+        });
+
 
         // Set default WebRTC tracing and INFO libjingle logging.
         // NOTE: this _must_ happen while |factory| is alive!

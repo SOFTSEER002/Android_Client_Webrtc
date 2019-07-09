@@ -83,16 +83,27 @@
                         android:visibility="gone" />
                 </LinearLayout>
 
+
+
+
+
                 <TextView
                     android:id="@+id/capture_format_text_call"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_above="@+id/capture_format_slider_call"
                     android:layout_centerHorizontal="true"
-                    android:text="@string/capture_format_change_text"
                     android:textSize="16sp"
-                    android:visibility="gone" />
-
+                    />
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/capture_format_slider_call"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="16sp"
+                    android:textColor="#B91C1C"
+                    />
                 <SeekBar
                     android:id="@+id/capture_format_slider_call"
                     android:layout_width="match_parent"

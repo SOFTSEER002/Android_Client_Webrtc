@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xhdpi-v4/values-xhdpi-v4.xml",
+            "outputFile": "E:\\Android_Client_Webrtc\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xhdpi-v4\\values-xhdpi-v4.xml",
             "map": [
                 {
-                    "source": "/home/doozy/.gradle/caches/transforms-2/files-2.1/8dbea3268f534ea70cbec8ec11dbd55c/res/values-xhdpi-v4/values-xhdpi-v4.xml",
+                    "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-2\\files-2.1\\f7fa4b9ed2c85a35e7c86531c2ec923a\\res\\values-xhdpi-v4\\values-xhdpi-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

@@ -1154,6 +1154,8 @@ id blocking
 id bottom
 id buttonPanel
 id button_call_disconnect
+id button_call_switch_camera
+id button_call_toggle_mic
 id button_toggle_debug
 id buttons_call_container
 id call_fragment_container

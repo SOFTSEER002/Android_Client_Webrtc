@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/doozy/Documents/AndroidProjects/WebRtc/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "E:\\Android_Client_Webrtc\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "/home/doozy/.gradle/caches/transforms-2/files-2.1/1a1d5fdfb69a478ed21c0d15a300a860/res/values-land/values-land.xml",
+                    "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-2\\files-2.1\\e2a267ef265afbf53ca3fb7c984f2adf\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/doozy/.gradle/caches/transforms-2/files-2.1/e7230dadf90b010a6d684bf49ee02105/res/values-land/values-land.xml",
+                    "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-2\\files-2.1\\f57324ae7fc163cf3e31fe37dcabf38b\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

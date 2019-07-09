@@ -22,8 +22,11 @@ public class ActivityCallBindingImpl extends ActivityCallBinding  {
         sViewsWithIds.put(R.id.contact_name_call, 6);
         sViewsWithIds.put(R.id.buttons_call_container, 7);
         sViewsWithIds.put(R.id.button_call_disconnect, 8);
-        sViewsWithIds.put(R.id.capture_format_text_call, 9);
-        sViewsWithIds.put(R.id.capture_format_slider_call, 10);
+        sViewsWithIds.put(R.id.button_call_switch_camera, 9);
+        sViewsWithIds.put(R.id.button_call_toggle_mic, 10);
+        sViewsWithIds.put(R.id.capture_format_text_call, 11);
+        sViewsWithIds.put(R.id.text, 12);
+        sViewsWithIds.put(R.id.capture_format_slider_call, 13);
     }
     // views
     @NonNull
@@ -34,20 +37,23 @@ public class ActivityCallBindingImpl extends ActivityCallBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityCallBindingImpl(@Nullable android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 11, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 14, sIncludes, sViewsWithIds));
     }
     private ActivityCallBindingImpl(android.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (android.widget.ImageButton) bindings[8]
+            , (android.widget.ImageButton) bindings[9]
+            , (android.widget.ImageButton) bindings[10]
             , (android.widget.LinearLayout) bindings[7]
             , (android.widget.FrameLayout) bindings[5]
-            , (android.widget.SeekBar) bindings[10]
-            , (android.widget.TextView) bindings[9]
+            , (android.widget.SeekBar) bindings[13]
+            , (android.widget.TextView) bindings[11]
             , (android.widget.TextView) bindings[6]
             , (com.myhexaville.androidwebrtc.app_rtc_sample.view.PercentFrameLayout) bindings[3]
             , (org.webrtc.SurfaceViewRenderer) bindings[4]
             , (com.myhexaville.androidwebrtc.app_rtc_sample.view.PercentFrameLayout) bindings[1]
             , (org.webrtc.SurfaceViewRenderer) bindings[2]
+            , (android.widget.TextView) bindings[12]
             );
         this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
         this.mboundView0.setTag(null);

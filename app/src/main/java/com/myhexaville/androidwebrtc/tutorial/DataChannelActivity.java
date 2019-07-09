@@ -9,6 +9,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.myhexaville.androidwebrtc.R;
 import com.myhexaville.androidwebrtc.databinding.ActivitySampleDataChannelBinding;
@@ -207,8 +208,14 @@ public class DataChannelActivity extends AppCompatActivity {
                     @Override
                     public void onMessage(DataChannel.Buffer buffer) {
                         Log.d(TAG, "onMessage: got message");
-                        readIncomingMessage(buffer.data);
+                        String message = byteBufferToString(buffer.data, Charset.defaultCharset());
+                        runOnUiThread(() -> binding.remoteText.setText(message));
+                        Toast.makeText(DataChannelActivity.this, "", Toast.LENGTH_SHORT).show();
+                        Log.d(TAG, "sendMessage2: client"+message);
+                        //readIncomingMessage(buffer.data);
                     }
+
+
                 });
             }
 
@@ -219,6 +226,17 @@ public class DataChannelActivity extends AppCompatActivity {
         };
 
         return factory.createPeerConnection(rtcConfig, pcConstraints, pcObserver);
+    }
+
+    private String byteBufferToString(ByteBuffer buffer, Charset charset) {
+        byte[] bytes;
+        if (buffer.hasArray()) {
+            bytes = buffer.array();
+        } else {
+            bytes = new byte[buffer.remaining()];
+            buffer.get(bytes);
+        }
+        return new String(bytes, charset);
     }
 
     public void sendMessage(View view) {
