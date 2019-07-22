@@ -558,7 +558,7 @@ public class PeerConnectionClient {
                 byte[] bytes = new byte[data.remaining()];
                 data.get(bytes);
                 final String command = new String(bytes);
-
+                Log.e("msg","Hello Message");
                 executor.execute(new Runnable() {
                     public void run() {
                         events.onReceivedData(command);

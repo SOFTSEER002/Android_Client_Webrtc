@@ -16,6 +16,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.Bitmap;
 import android.graphics.Point;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -38,6 +39,10 @@ import com.myhexaville.androidwebrtc.app_rtc_sample.web_rtc.PeerConnectionClient
 import com.myhexaville.androidwebrtc.app_rtc_sample.web_rtc.PeerConnectionClient.PeerConnectionParameters;
 import com.myhexaville.androidwebrtc.app_rtc_sample.web_rtc.WebSocketRTCClient;
 
+import org.java_websocket.client.WebSocketClient;
+import org.java_websocket.handshake.ServerHandshake;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.webrtc.Camera1Enumerator;
 import org.webrtc.Camera2Enumerator;
 import org.webrtc.CameraEnumerator;
@@ -49,12 +54,16 @@ import org.webrtc.StatsReport;
 import org.webrtc.VideoCapturer;
 import org.webrtc.VideoRenderer;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
 import androidmads.library.qrgenearator.QRGContents;
 import androidmads.library.qrgenearator.QRGEncoder;
+import io.socket.client.IO;
+import io.socket.client.Socket;
 
 import static com.myhexaville.androidwebrtc.app_rtc_sample.util.Constants.CAPTURE_PERMISSION_REQUEST_CODE;
 import static com.myhexaville.androidwebrtc.app_rtc_sample.util.Constants.EXTRA_ROOMID;
@@ -71,8 +80,13 @@ import static com.myhexaville.androidwebrtc.app_rtc_sample.util.Constants.REMOTE
 import static com.myhexaville.androidwebrtc.app_rtc_sample.util.Constants.REMOTE_X;
 import static com.myhexaville.androidwebrtc.app_rtc_sample.util.Constants.REMOTE_Y;
 import static com.myhexaville.androidwebrtc.app_rtc_sample.util.Constants.STAT_CALLBACK_PERIOD;
+import static io.socket.client.Socket.EVENT_CONNECT;
+import static io.socket.client.Socket.EVENT_DISCONNECT;
 import static org.webrtc.RendererCommon.ScalingType.SCALE_ASPECT_FILL;
 import static org.webrtc.RendererCommon.ScalingType.SCALE_ASPECT_FIT;
+import static org.webrtc.SessionDescription.Type.ANSWER;
+import static org.webrtc.SessionDescription.Type.OFFER;
+
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.Bitmap;
@@ -119,7 +133,7 @@ public class CallActivity extends AppCompatActivity
     private EglBase rootEglBase;
     private final List<VideoRenderer.Callbacks> remoteRenderers = new ArrayList<>();
     private boolean activityRunning;
-
+    WebSocketClient mWebSocketClient;
     private RoomConnectionParameters roomConnectionParameters;
     private PeerConnectionParameters peerConnectionParameters;
 
@@ -127,6 +141,10 @@ public class CallActivity extends AppCompatActivity
     private boolean isError;
     private long callStartedTimeMs;
     private boolean micEnabled = true;
+    private Socket socket;
+    private boolean isInitiator;
+    private boolean isChannelReady;
+    private boolean isStarted;
 
     private ActivityCallBinding binding;
     Dialog dialog;
@@ -137,9 +155,9 @@ public class CallActivity extends AppCompatActivity
     private static final String TAG = "SampleDataChannelAct";
     public static final int CHUNK_SIZE = 64000;
 
-   // private ActivitySampleDataChannelBinding binding;
+    // private ActivitySampleDataChannelBinding binding;
     private PeerConnectionFactory factory;
-    private PeerConnection localPeerConnection, remotePeerConnection;
+    private PeerConnection peerConnection, localPeerConnection, remotePeerConnection;
     private DataChannel localDataChannel;
     private ImagePicker imagePicker;
 
@@ -217,25 +235,65 @@ public class CallActivity extends AppCompatActivity
         startCall();
     }
 
+    private void connectWebSocket() {
+        URI uri;
+        try {
+            uri = new URI("wss://apprtc-ws.webrtc.org:443/ws");
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+            return;
+        }
+        mWebSocketClient = new WebSocketClient(uri) {
+            @Override
+            public void onOpen(ServerHandshake serverHandshake) {
+                Log.i("Websocket", "Opened");
+                mWebSocketClient.send("Hello from " + Build.MANUFACTURER + " " + Build.MODEL);
+            }
 
+            @Override
+            public void onMessage(String s) {
+                final String message = s;
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+//                        TextView textView = (TextView)findViewById(R.id.messages);
+//                        textView.setText(textView.getText() + "\n" + message);
+                        Log.d("websocket", message);
+                    }
+                });
+            }
+
+            @Override
+            public void onClose(int i, String s, boolean b) {
+                Log.i("Websocket", "Closed " + s);
+            }
+
+            @Override
+            public void onError(Exception e) {
+                Log.i("Websocket", "Error " + e.getMessage());
+            }
+        };
+        mWebSocketClient.connect();
+    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         imagePicker.handlePermission(requestCode, grantResults);
     }
-
     private void initializePeerConnectionFactory() {
         PeerConnectionFactory.initializeAndroidGlobals(this, true, true, true);
         factory = new PeerConnectionFactory(null);
     }
 
     private void initializePeerConnections() {
+        peerConnection = createPeerConnection(factory, true);
+
         localPeerConnection = createPeerConnection(factory, true);
         remotePeerConnection = createPeerConnection(factory, false);
-         this.localDataChannel = remotePeerConnection.createDataChannel("sendDataChannel",new DataChannel.Init());
+        this.localDataChannel = remotePeerConnection.createDataChannel("sendDataChannel", new DataChannel.Init());
 
-       // localDataChannel = localPeerConnection.createDataChannel("sendDataChannel", new DataChannel.Init());
+        // localDataChannel = localPeerConnection.createDataChannel("sendDataChannel", new DataChannel.Init());
         localDataChannel.registerObserver(new DataChannel.Observer() {
             @Override
             public void onBufferedAmountChange(long l) {
@@ -247,9 +305,9 @@ public class CallActivity extends AppCompatActivity
                 Log.d(TAG, "onStateChange: " + localDataChannel.state().toString());
                 runOnUiThread(() -> {
                     if (localDataChannel.state() == DataChannel.State.OPEN) {
-                       // binding.sendButton.setEnabled(true);
+                        // binding.sendButton.setEnabled(true);
                     } else {
-                       // binding.sendButton.setEnabled(false);
+                        // binding.sendButton.setEnabled(false);
                     }
                 });
             }
@@ -316,6 +374,22 @@ public class CallActivity extends AppCompatActivity
                 } else {
                     localPeerConnection.addIceCandidate(iceCandidate);
                 }
+
+
+                Log.d(TAG, "onIceCandidate: ");
+                JSONObject message = new JSONObject();
+
+                try {
+                    message.put("type", "candidate");
+                    message.put("label", iceCandidate.sdpMLineIndex);
+                    message.put("id", iceCandidate.sdpMid);
+                    message.put("candidate", iceCandidate.sdp);
+
+                    Log.d(TAG, "onIceCandidate: sending candidate " + message);
+                    sendMessage(message);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
 
             @Override
@@ -353,9 +427,9 @@ public class CallActivity extends AppCompatActivity
                         Log.d(TAG, "onMessage: got message");
                         Toast.makeText(CallActivity.this, "Connected", Toast.LENGTH_SHORT).show();
                         String message = byteBufferToString(buffer.data, Charset.defaultCharset());
-                        Log.d(TAG, "onMessage2: "+message);
+                        Log.d(TAG, "onMessage2: " + message);
                         runOnUiThread(() -> binding.text.setText(message));
-                        Toast.makeText(CallActivity.this, ""+message, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(CallActivity.this, "" + message, Toast.LENGTH_SHORT).show();
                         readIncomingMessage(buffer.data);
                     }
 
@@ -368,8 +442,95 @@ public class CallActivity extends AppCompatActivity
                 Log.d(TAG, "onRenegotiationNeeded: ");
             }
         };
+        // Set ICE servers
+        List<PeerConnection.IceServer> iceServers = new ArrayList<>();
+        iceServers.add(new org.webrtc.PeerConnection.IceServer("stun:stun.l.google.com:19302"));
 
-        return factory.createPeerConnection(rtcConfig, pcConstraints, pcObserver);
+        iceServers.add(new org.webrtc.PeerConnection.IceServer("turn:numb.viagenie.ca", "webrtc@live.com", "muazkh"));
+        // Create peer connection
+        final PeerConnectionFactory.Options options = new PeerConnectionFactory.Options();
+//        PeerConnectionFactory factory = new PeerConnectionFactory(new PeerConnectionFactory.Options());
+        MediaConstraints constraints = new MediaConstraints();
+        return factory.createPeerConnection(iceServers, constraints, pcObserver);
+    }
+
+    private void connectToSignallingServer() {
+        try {
+            socket = IO.socket("https://salty-sea-26559.herokuapp.com/");
+
+            socket.on(EVENT_CONNECT, args -> {
+                Log.d(TAG, "connectToSignallingServer: connect");
+                socket.emit("create or join", "foo");
+            }).on("ipaddr", args -> {
+                Log.d(TAG, "connectToSignallingServer: ipaddr");
+            }).on("created", args -> {
+                Log.d(TAG, "connectToSignallingServer: created");
+                isInitiator = true;
+            }).on("full", args -> {
+                Log.d(TAG, "connectToSignallingServer: full");
+            }).on("join", args -> {
+                Log.d(TAG, "connectToSignallingServer: join");
+                Log.d(TAG, "connectToSignallingServer: Another peer made a request to join room");
+                Log.d(TAG, "connectToSignallingServer: This peer is the initiator of room");
+                isChannelReady = true;
+            }).on("joined", args -> {
+                Log.d(TAG, "connectToSignallingServer: joined");
+                isChannelReady = true;
+            }).on("log", args -> {
+                for (Object arg : args) {
+                    Log.d(TAG, "connectToSignallingServer: " + String.valueOf(arg));
+                }
+            }).on("message", args -> {
+                Log.d(TAG, "connectToSignallingServer: got a message ");
+
+            }).on("message", args -> {
+                try {
+                    if (args[0] instanceof String) {
+                        String message = (String) args[0];
+                        if (message.equals("got user media")) {
+                            maybeStart();
+                        }
+                    } else {
+                        JSONObject message = (JSONObject) args[0];
+                        Log.d(TAG, "connectToSignallingServer: got message " + message);
+                        if (message.getString("type").equals("offer")) {
+                            Log.d(TAG, "connectToSignallingServer: received an offer " + isInitiator + " " + isStarted);
+                            if (!isInitiator && !isStarted) {
+                                maybeStart();
+                            }
+                            peerConnection.setRemoteDescription(new SimpleSdpObserver(), new SessionDescription(OFFER, message.getString("sdp")));
+                            callConnected();
+                        } else if (message.getString("type").equals("answer") && isStarted) {
+                            peerConnection.setRemoteDescription(new SimpleSdpObserver(), new SessionDescription(ANSWER, message.getString("sdp")));
+                        } else if (message.getString("type").equals("candidate") && isStarted) {
+                            Log.d(TAG, "connectToSignallingServer: receiving candidates");
+                            IceCandidate candidate = new IceCandidate(message.getString("id"), message.getInt("label"), message.getString("candidate"));
+                            peerConnection.addIceCandidate(candidate);
+                        }
+                        /*else if (message === 'bye' && isStarted) {
+                        handleRemoteHangup();
+                    }*/
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }).on(EVENT_DISCONNECT, args -> {
+                Log.d(TAG, "connectToSignallingServer: disconnect");
+            });
+            socket.connect();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void maybeStart() {
+        Log.d(TAG, "maybeStart: " + isStarted + " " + isChannelReady);
+        if (!isStarted && isChannelReady) {
+            isStarted = true;
+            if (isInitiator) {
+                startCall();
+            }
+        }
     }
 
     private String byteBufferToString(ByteBuffer buffer, Charset charset) {
@@ -383,16 +544,17 @@ public class CallActivity extends AppCompatActivity
         return new String(bytes, charset);
     }
 
-    public void sendMessagee(View view) {
-        String message = "hello";
-        if (message.isEmpty()) {
-            return;
-        }
-
-        //binding.textInput.setText("");
-
-        ByteBuffer data = stringToByteBuffer("-s" + message, Charset.defaultCharset());
-        localDataChannel.send(new DataChannel.Buffer(data, false));
+    //    public void sendMessagee(View view) {
+//        String message = "hello";
+//        if (message.isEmpty()) {
+//            return;
+//        }
+//        //binding.textInput.setText("");
+//        ByteBuffer data = stringToByteBuffer("-s " + message, Charset.defaultCharset());
+//        localDataChannel.send(new DataChannel.Buffer(data, false));
+//    }
+    private void sendMessage(Object message) {
+        socket.emit("message", message);
     }
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
@@ -445,7 +607,7 @@ public class CallActivity extends AppCompatActivity
                 Log.d(TAG, "readIncomingMessage: incoming file size " + incomingFileSize);
                 receivingFile = true;
             } else if (type.equals("-s")) {
-               // runOnUiThread(() -> binding.remoteText.setText(firstMessage.substring(2, firstMessage.length())));
+                // runOnUiThread(() -> binding.remoteText.setText(firstMessage.substring(2, firstMessage.length())));
             }
         } else {
             for (byte b : bytes) {
@@ -555,11 +717,12 @@ public class CallActivity extends AppCompatActivity
     @Override
     public void onStart() {
         super.onStart();
-
+        connectWebSocket();
         Bundle args = getIntent().getExtras();
         if (args != null) {
             String contactName = args.getString(EXTRA_ROOMID);
 //            binding.contactNameCall.setText(contactName);
+
         }
         binding.captureFormatTextCall.setVisibility(View.GONE);
         binding.captureFormatSliderCall.setVisibility(View.GONE);
@@ -632,6 +795,7 @@ public class CallActivity extends AppCompatActivity
         // MODE_IN_COMMUNICATION for best possible VoIP performance.
         Log.d(LOG_TAG, "Starting the audio manager...");
         audioManager.start(this::onAudioManagerDevicesChanged);
+        connectToSignallingServer();
 
     }
 
@@ -928,8 +1092,8 @@ public class CallActivity extends AppCompatActivity
 
     @Override
     public void onReceivedData(String command) {
-        Log.d(TAG, "onReceivedData: "+command);
-       // Toast.makeText(this, ""+command, Toast.LENGTH_SHORT).show();
+        Log.d(TAG, "onReceivedData: " + command);
+        // Toast.makeText(this, ""+command, Toast.LENGTH_SHORT).show();
     }
 
 
