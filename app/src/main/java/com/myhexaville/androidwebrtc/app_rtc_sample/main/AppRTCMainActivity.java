@@ -58,18 +58,21 @@ public class AppRTCMainActivity extends Activity implements ZXingScannerView.Res
         Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
                 .getBoolean("isFirstRun", true);
 
-
         //      Requesting Permission for the Camera
         if (ContextCompat.checkSelfPermission(AppRTCMainActivity.this,
                 Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(AppRTCMainActivity.this,
-                Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+                Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(AppRTCMainActivity.this,
+                Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(AppRTCMainActivity.this,
+                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
             if (ActivityCompat.shouldShowRequestPermissionRationale((Activity)
-                    AppRTCMainActivity.this, Manifest.permission.CAMERA)) {
+                    AppRTCMainActivity.this, Manifest.permission.CAMERA) && ActivityCompat.shouldShowRequestPermissionRationale((Activity)
+                    AppRTCMainActivity.this, Manifest.permission.RECORD_AUDIO) && ActivityCompat.shouldShowRequestPermissionRationale((Activity)
+                    AppRTCMainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)) {
 
             } else {
                 ActivityCompat.requestPermissions((Activity) AppRTCMainActivity.this,
-                        new String[]{Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO},
+                        new String[]{Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO, Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION},
                         200);
 
                 //      Condition for Checking isFirstRun or not
@@ -81,7 +84,7 @@ public class AppRTCMainActivity extends Activity implements ZXingScannerView.Res
             }
 
         } else {
-    //      Condition for Checking isFirstRun or not
+            //      Condition for Checking isFirstRun or not
 
             if (isFirstRun) {
                 startActivity(new Intent(AppRTCMainActivity.this, Splash.class));

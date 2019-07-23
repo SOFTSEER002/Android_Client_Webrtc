@@ -42,6 +42,9 @@ public abstract class ActivityCallBinding extends ViewDataBinding {
   public final TextView contactNameCall;
 
   @NonNull
+  public final LinearLayout header;
+
+  @NonNull
   public final PercentFrameLayout localVideoLayout;
 
   @NonNull
@@ -54,15 +57,19 @@ public abstract class ActivityCallBinding extends ViewDataBinding {
   public final SurfaceViewRenderer remoteVideoView;
 
   @NonNull
+  public final TextView tempdata;
+
+  @NonNull
   public final TextView text;
 
   protected ActivityCallBinding(DataBindingComponent _bindingComponent, View _root,
       int _localFieldCount, ImageButton buttonCallDisconnect, ImageButton buttonCallSwitchCamera,
       ImageButton buttonCallToggleMic, LinearLayout buttonsCallContainer,
       FrameLayout callFragmentContainer, SeekBar captureFormatSliderCall,
-      TextView captureFormatTextCall, TextView contactNameCall, PercentFrameLayout localVideoLayout,
-      SurfaceViewRenderer localVideoView, PercentFrameLayout remoteVideoLayout,
-      SurfaceViewRenderer remoteVideoView, TextView text) {
+      TextView captureFormatTextCall, TextView contactNameCall, LinearLayout header,
+      PercentFrameLayout localVideoLayout, SurfaceViewRenderer localVideoView,
+      PercentFrameLayout remoteVideoLayout, SurfaceViewRenderer remoteVideoView, TextView tempdata,
+      TextView text) {
     super(_bindingComponent, _root, _localFieldCount);
     this.buttonCallDisconnect = buttonCallDisconnect;
     this.buttonCallSwitchCamera = buttonCallSwitchCamera;
@@ -72,10 +79,12 @@ public abstract class ActivityCallBinding extends ViewDataBinding {
     this.captureFormatSliderCall = captureFormatSliderCall;
     this.captureFormatTextCall = captureFormatTextCall;
     this.contactNameCall = contactNameCall;
+    this.header = header;
     this.localVideoLayout = localVideoLayout;
     this.localVideoView = localVideoView;
     this.remoteVideoLayout = remoteVideoLayout;
     this.remoteVideoView = remoteVideoView;
+    this.tempdata = tempdata;
     this.text = text;
   }
 

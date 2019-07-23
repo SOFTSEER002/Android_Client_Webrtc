@@ -180,6 +180,10 @@
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-2\\files-2.1\\0743bbd977659b014bb4aa59b9210b64\\res\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
+        "merged": "E:\\Projects\\Android_Client_Webrtc\\app\\build\\intermediates\\res\\merged\\debug\\drawable_map.jpg.flat",
+        "source": "E:\\Projects\\Android_Client_Webrtc\\app\\src\\main\\res\\drawable\\map.jpg"
+    },
+    {
         "merged": "E:\\Projects\\Android_Client_Webrtc\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_btn_colored_material.xml.flat",
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-2\\files-2.1\\0743bbd977659b014bb4aa59b9210b64\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },

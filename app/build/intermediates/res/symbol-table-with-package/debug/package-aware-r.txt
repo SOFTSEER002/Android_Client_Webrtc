@@ -1095,6 +1095,7 @@ drawable ic_launcher_background
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable map
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1220,6 +1221,7 @@ id ghost_view
 id gone
 id group_divider
 id groups
+id header
 id home
 id homeAsUp
 id hud_stat_bwe
@@ -1337,6 +1339,7 @@ id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
+id tempdata
 id text
 id text2
 id textSpacerNoButtons
