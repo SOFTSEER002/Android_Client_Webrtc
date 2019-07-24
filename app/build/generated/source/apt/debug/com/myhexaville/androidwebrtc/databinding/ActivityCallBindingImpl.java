@@ -15,20 +15,28 @@ public class ActivityCallBindingImpl extends ActivityCallBinding  {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.header, 1);
-        sViewsWithIds.put(R.id.tempdata, 2);
-        sViewsWithIds.put(R.id.remote_video_layout, 3);
-        sViewsWithIds.put(R.id.remote_video_view, 4);
-        sViewsWithIds.put(R.id.local_video_layout, 5);
-        sViewsWithIds.put(R.id.local_video_view, 6);
-        sViewsWithIds.put(R.id.call_fragment_container, 7);
-        sViewsWithIds.put(R.id.contact_name_call, 8);
-        sViewsWithIds.put(R.id.buttons_call_container, 9);
-        sViewsWithIds.put(R.id.button_call_disconnect, 10);
-        sViewsWithIds.put(R.id.button_call_switch_camera, 11);
-        sViewsWithIds.put(R.id.button_call_toggle_mic, 12);
-        sViewsWithIds.put(R.id.capture_format_text_call, 13);
-        sViewsWithIds.put(R.id.text, 14);
-        sViewsWithIds.put(R.id.capture_format_slider_call, 15);
+        sViewsWithIds.put(R.id.stats, 2);
+        sViewsWithIds.put(R.id.batTemp, 3);
+        sViewsWithIds.put(R.id.batlvl, 4);
+        sViewsWithIds.put(R.id.networksignal, 5);
+        sViewsWithIds.put(R.id.wifisignal, 6);
+        sViewsWithIds.put(R.id.batTempsocket, 7);
+        sViewsWithIds.put(R.id.batlvlsocket, 8);
+        sViewsWithIds.put(R.id.networksignalsocket, 9);
+        sViewsWithIds.put(R.id.wifisignalsocket, 10);
+        sViewsWithIds.put(R.id.remote_video_layout, 11);
+        sViewsWithIds.put(R.id.remote_video_view, 12);
+        sViewsWithIds.put(R.id.local_video_layout, 13);
+        sViewsWithIds.put(R.id.local_video_view, 14);
+        sViewsWithIds.put(R.id.call_fragment_container, 15);
+        sViewsWithIds.put(R.id.contact_name_call, 16);
+        sViewsWithIds.put(R.id.buttons_call_container, 17);
+        sViewsWithIds.put(R.id.button_call_disconnect, 18);
+        sViewsWithIds.put(R.id.button_call_switch_camera, 19);
+        sViewsWithIds.put(R.id.button_call_toggle_mic, 20);
+        sViewsWithIds.put(R.id.capture_format_text_call, 21);
+        sViewsWithIds.put(R.id.text, 22);
+        sViewsWithIds.put(R.id.capture_format_slider_call, 23);
     }
     // views
     @NonNull
@@ -39,25 +47,33 @@ public class ActivityCallBindingImpl extends ActivityCallBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityCallBindingImpl(@Nullable android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 16, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 24, sIncludes, sViewsWithIds));
     }
     private ActivityCallBindingImpl(android.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.ImageButton) bindings[10]
-            , (android.widget.ImageButton) bindings[11]
-            , (android.widget.ImageButton) bindings[12]
-            , (android.widget.LinearLayout) bindings[9]
-            , (android.widget.FrameLayout) bindings[7]
-            , (android.widget.SeekBar) bindings[15]
-            , (android.widget.TextView) bindings[13]
+            , (android.widget.TextView) bindings[3]
+            , (android.widget.TextView) bindings[7]
+            , (android.widget.TextView) bindings[4]
             , (android.widget.TextView) bindings[8]
+            , (android.widget.ImageButton) bindings[18]
+            , (android.widget.ImageButton) bindings[19]
+            , (android.widget.ImageButton) bindings[20]
+            , (android.widget.LinearLayout) bindings[17]
+            , (android.widget.FrameLayout) bindings[15]
+            , (android.widget.SeekBar) bindings[23]
+            , (android.widget.TextView) bindings[21]
+            , (android.widget.TextView) bindings[16]
             , (android.widget.LinearLayout) bindings[1]
-            , (com.myhexaville.androidwebrtc.app_rtc_sample.view.PercentFrameLayout) bindings[5]
-            , (org.webrtc.SurfaceViewRenderer) bindings[6]
-            , (com.myhexaville.androidwebrtc.app_rtc_sample.view.PercentFrameLayout) bindings[3]
-            , (org.webrtc.SurfaceViewRenderer) bindings[4]
+            , (com.myhexaville.androidwebrtc.app_rtc_sample.view.PercentFrameLayout) bindings[13]
+            , (org.webrtc.SurfaceViewRenderer) bindings[14]
+            , (android.widget.TextView) bindings[5]
+            , (android.widget.TextView) bindings[9]
+            , (com.myhexaville.androidwebrtc.app_rtc_sample.view.PercentFrameLayout) bindings[11]
+            , (org.webrtc.SurfaceViewRenderer) bindings[12]
             , (android.widget.TextView) bindings[2]
-            , (android.widget.TextView) bindings[14]
+            , (android.widget.TextView) bindings[22]
+            , (android.widget.TextView) bindings[6]
+            , (android.widget.TextView) bindings[10]
             );
         this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
         this.mboundView0.setTag(null);

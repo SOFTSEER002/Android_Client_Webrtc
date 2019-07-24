@@ -10,18 +10,26 @@
 
 package com.myhexaville.androidwebrtc.app_rtc_sample.call;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
+import android.databinding.ObservableMap;
 import android.graphics.Bitmap;
 import android.graphics.Point;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Display;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
@@ -31,6 +39,16 @@ import android.widget.ImageView;
 import com.github.nkzawa.emitter.Emitter;
 import com.github.nkzawa.socketio.client.IO;
 import com.github.nkzawa.socketio.client.Socket;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.zxing.WriterException;
 import com.myhexaville.androidwebrtc.R;
 import com.myhexaville.androidwebrtc.app_rtc_sample.main.AppRTCMainActivity;
@@ -87,6 +105,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.myhexaville.androidwebrtc.tutorial.SimpleSdpObserver;
@@ -107,7 +126,7 @@ import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
 
 public class CallActivity extends AppCompatActivity
-        implements AppRTCClient.SignalingEvents, PeerConnectionClient.PeerConnectionEvents, OnCallEvents {
+        implements AppRTCClient.SignalingEvents, PeerConnectionClient.PeerConnectionEvents, OnCallEvents, OnMapReadyCallback {
 
     private static final String LOG_TAG = "CallActivity";
     private PeerConnectionClient peerConnectionClient;
@@ -119,15 +138,15 @@ public class CallActivity extends AppCompatActivity
     private boolean activityRunning;
     private RoomConnectionParameters roomConnectionParameters;
     private PeerConnectionParameters peerConnectionParameters;
-
+    private GoogleMap.OnCameraIdleListener onCameraIdleListener;
     private boolean iceConnected;
     private boolean isError;
     private long callStartedTimeMs;
     private boolean micEnabled = true;
-    private boolean isInitiator;
-    private boolean isChannelReady;
     private boolean isStarted;
-
+    double latitude, longitude;
+    Marker mCurrLocationMarker;
+    TextView tv_bat_lvl, tv_bat_temp, tv_wifi_signal, tv_net_signal;
     private ActivityCallBinding binding;
     Dialog dialog;
     String roomId = null;
@@ -142,6 +161,7 @@ public class CallActivity extends AppCompatActivity
     private PeerConnection peerConnection, localPeerConnection, remotePeerConnection;
     private DataChannel localDataChannel;
     private ImagePicker imagePicker;
+    GoogleApiClient mGoogleApiClient;
 
     int incomingFileSize;
     int currentIndexPointer;
@@ -150,11 +170,14 @@ public class CallActivity extends AppCompatActivity
     private String android_id, Username;
     private Boolean hasConnection = false;
     private Socket mSocket;
+    private GoogleMap mMap;
+    SupportMapFragment mapFragment;
 
     {
         try {
             mSocket = IO.socket("https://intense-bayou-55879.herokuapp.com/");
         } catch (URISyntaxException e) {
+            e.printStackTrace();
         }
     }
 
@@ -169,7 +192,13 @@ public class CallActivity extends AppCompatActivity
         binding = DataBindingUtil.setContentView(this, R.layout.activity_call);
         android_id = Settings.Secure.getString(this.getContentResolver(),
                 Settings.Secure.ANDROID_ID);
-
+        mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+        tv_bat_lvl = findViewById(R.id.batlvlsocket);
+        tv_bat_temp = findViewById(R.id.batTempsocket);
+        tv_net_signal = findViewById(R.id.networksignalsocket);
+        tv_wifi_signal = findViewById(R.id.wifisignalsocket);
         initializePeerConnectionFactory();
 
         initializePeerConnections();
@@ -188,7 +217,6 @@ public class CallActivity extends AppCompatActivity
         // Get Intent parameters.
         Intent intent = getIntent();
         roomId = intent.getStringExtra(EXTRA_ROOMID);
-
 
         remoteRenderers.add(binding.remoteVideoView);
 
@@ -226,6 +254,26 @@ public class CallActivity extends AppCompatActivity
         peerConnectionClient.createPeerConnectionFactory(this, peerConnectionParameters, this);
 
         startCall();
+    }
+
+    private void socketIO() {
+        Username = android_id;
+        if (hasConnection) {
+
+        } else {
+            mSocket.connect();
+            mSocket.on("connect user", onNewUser);
+            mSocket.on("jsondata", onNewMessage);
+
+            JSONObject userId = new JSONObject();
+            try {
+                userId.put("connected", Username + " Connected");
+                mSocket.emit("connect user", userId);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
 
@@ -386,17 +434,6 @@ public class CallActivity extends AppCompatActivity
 
 
         return factory.createPeerConnection(rtcConfig, pcConstraints, pcObserver);
-    }
-
-
-    private void maybeStart() {
-        Log.d(TAG, "maybeStart: " + isStarted + " " + isChannelReady);
-        if (!isStarted && isChannelReady) {
-            isStarted = true;
-            if (isInitiator) {
-                startCall();
-            }
-        }
     }
 
     private String byteBufferToString(ByteBuffer buffer, Charset charset) {
@@ -588,7 +625,6 @@ public class CallActivity extends AppCompatActivity
         super.onDestroy();
         if (isFinishing()) {
             Log.i("Destroying", "onDestroy: ");
-
             JSONObject userId = new JSONObject();
             try {
                 userId.put("username", Username + " DisConnected");
@@ -596,9 +632,8 @@ public class CallActivity extends AppCompatActivity
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
             mSocket.disconnect();
-            mSocket.off("chat message", onNewMessage);
+            mSocket.off("jsondata", onNewMessage);
             mSocket.off("connect user", onNewUser);
             Username = "";
 
@@ -623,7 +658,7 @@ public class CallActivity extends AppCompatActivity
             }
 
             mSocket.disconnect();
-            mSocket.off("chat message", onNewMessage);
+            mSocket.off("jsondata", onNewMessage);
             mSocket.off("connect user", onNewUser);
             Username = "";
 
@@ -692,8 +727,8 @@ public class CallActivity extends AppCompatActivity
     private void callConnected() {
 //        dialog.dismiss();
         Log.e("room==>", roomId);
-        onToggleMic();
         socketIO();
+        onToggleMic();
 
         final long delta = System.currentTimeMillis() - callStartedTimeMs;
         Log.i(LOG_TAG, "Call connected: delay=" + delta + "ms");
@@ -709,25 +744,6 @@ public class CallActivity extends AppCompatActivity
         peerConnectionClient.enableStatsEvents(true, STAT_CALLBACK_PERIOD);
     }
 
-    private void socketIO() {
-        Username = android_id;
-        if (hasConnection) {
-
-        } else {
-            mSocket.connect();
-            mSocket.on("connect user", onNewUser);
-            mSocket.on("chat message", onNewMessage);
-
-            JSONObject userId = new JSONObject();
-            try {
-                userId.put("connected", Username + " Connected");
-                mSocket.emit("connect user", userId);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-
-    }
 
     public void sendMessage(String message) {
         Log.e("sendMessage", "sendMessage: ");
@@ -744,7 +760,7 @@ public class CallActivity extends AppCompatActivity
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        Log.e("sendMessage3", "sendMessage: 1" + mSocket.emit("chat message", jsonObject));
+        Log.e("sendMessage3", "sendMessage: 1" + mSocket.emit("jsondata", jsonObject));
     }
 
     Emitter.Listener onNewMessage = new Emitter.Listener() {
@@ -753,23 +769,50 @@ public class CallActivity extends AppCompatActivity
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    Log.e("new", "run: " + args.length);
+                    Log.e("Receive", "run: " + args.length);
                     JSONObject data = (JSONObject) args[0];
-                    String username;
-                    String message;
-                    String id;
+                    String username, lat, longi, batteryTemp, batterylevel, wifisignal, networksignal;
                     try {
                         username = data.getString("username");
-                        message = data.getString("message");
-                        Log.e("Message", "run: " + username + message);
-                        Toast.makeText(CallActivity.this, message, Toast.LENGTH_LONG).show();
+                        lat = data.getString("latitute");
+                        longi = data.getString("longitute");
+                        batteryTemp = data.getString("batteryTemp");
+                        batterylevel = data.getString("batteryLevel");
+                        networksignal = data.getString("networkSignal");
+                        wifisignal = data.getString("wifiSignal");
+                        Log.e("Message", "run: " + username + "\n" + lat + "\n" + longi + "\n" + batteryTemp
+                                + "\n" + batterylevel + "\n" + networksignal + "\n" + wifisignal);
+
+                        if (lat != null && longi != null) {
+                            latitude = Double.parseDouble(lat);
+                            longitude = Double.parseDouble(longi);
+                            Log.e(TAG, "LatLong: " + latitude + "    " + longitude);
+                            LatLng latLng = new LatLng(latitude, longitude);
+                            MarkerOptions markerOptions = new MarkerOptions();
+                            if (mCurrLocationMarker != null) {
+                                mCurrLocationMarker.remove();
+                            }
+                            markerOptions.position(latLng);
+                            markerOptions.title("Current Position");
+                            markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
+                            mCurrLocationMarker = mMap.addMarker(markerOptions);
+                            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 17.0f));
+                            tv_bat_lvl.setText(batterylevel);
+                            tv_bat_temp.setText(batteryTemp);
+                            tv_wifi_signal.setText(wifisignal);
+                            tv_net_signal.setText(networksignal);
+                        } else {
+                            return;
+                        }
                     } catch (Exception e) {
+                        e.printStackTrace();
                         return;
                     }
                 }
             });
         }
     };
+
     Emitter.Listener onNewUser = new Emitter.Listener() {
         @Override
         public void call(final Object... args) {
@@ -861,6 +904,15 @@ public class CallActivity extends AppCompatActivity
             }
         });
         dialog.show();
+        dialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
+            @Override
+            public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
+                // Prevent dialog close on back press button
+                finish();
+                startActivity(new Intent(CallActivity.this, AppRTCMainActivity.class));
+                return keyCode == KeyEvent.KEYCODE_BACK;
+            }
+        });
     }
 
     private void disconnectWithErrorMessage(final String errorMessage) {
@@ -1053,7 +1105,7 @@ public class CallActivity extends AppCompatActivity
             iceConnected = false;
             disconnect();
         });
-        if (isFinishing()) {
+
             Log.i("Destroying", "onDestroy: ");
 
             JSONObject userId = new JSONObject();
@@ -1065,13 +1117,9 @@ public class CallActivity extends AppCompatActivity
             }
 
             mSocket.disconnect();
-            mSocket.off("chat message", onNewMessage);
+            mSocket.off("jsondata", onNewMessage);
             mSocket.off("connect user", onNewUser);
             Username = "";
-
-        } else {
-            Log.i("Destroying", "onDestroy: is rotating.....");
-        }
     }
 
     @Override
@@ -1127,4 +1175,74 @@ public class CallActivity extends AppCompatActivity
 
 
     }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+        mMap.setOnCameraIdleListener(onCameraIdleListener);
+        mMap.getUiSettings().setMyLocationButtonEnabled(false);
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
+            mMap.setMyLocationEnabled(true);
+        } else {
+            checkLocationPermission();
+        }
+
+        //Initialize Google Play Services
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (ContextCompat.checkSelfPermission(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION)
+                    == PackageManager.PERMISSION_GRANTED) {
+                //Location Permission already granted
+//                buildGoogleApiClient();
+                mMap.setMyLocationEnabled(true);
+            } else {
+                //Request Location Permission
+                checkLocationPermission();
+            }
+        } else {
+//            buildGoogleApiClient();
+            mMap.setMyLocationEnabled(true);
+        }
+    }
+
+    private void checkLocationPermission() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            // Should we show an explanation?
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION)) {
+
+                // Show an explanation to the user *asynchronously* -- don't block
+                // this thread waiting for the user's response! After the user
+                // sees the explanation, try again to request the permission.
+                new android.support.v7.app.AlertDialog.Builder(this)
+                        .setTitle("Location Permission Needed")
+                        .setMessage("This app needs the Location permission, please accept to use location functionality")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                //Prompt the user once explanation has been shown
+                                ActivityCompat.requestPermissions(CallActivity.this,
+                                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                                        1);
+                            }
+                        })
+                        .create()
+                        .show();
+
+
+            } else {
+                // No explanation needed, we can request the permission.
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                        1);
+            }
+        }
+    }
+
+
 }

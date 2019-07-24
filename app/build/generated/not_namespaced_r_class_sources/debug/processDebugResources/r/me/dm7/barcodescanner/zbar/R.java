@@ -12,14 +12,14 @@ public final class R {
     public static final class color {
         private color() {}
 
-        public static final int viewfinder_border = 0x7f060083;
-        public static final int viewfinder_laser = 0x7f060084;
-        public static final int viewfinder_mask = 0x7f060085;
+        public static final int viewfinder_border = 0x7f0601fc;
+        public static final int viewfinder_laser = 0x7f0601fd;
+        public static final int viewfinder_mask = 0x7f0601fe;
     }
     public static final class integer {
         private integer() {}
 
-        public static final int viewfinder_border_length = 0x7f0a000f;
-        public static final int viewfinder_border_width = 0x7f0a0010;
+        public static final int viewfinder_border_length = 0x7f0a0010;
+        public static final int viewfinder_border_width = 0x7f0a0011;
     }
 }

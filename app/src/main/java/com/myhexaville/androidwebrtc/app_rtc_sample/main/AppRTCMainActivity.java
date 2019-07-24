@@ -42,8 +42,8 @@ public class AppRTCMainActivity extends Activity implements ZXingScannerView.Res
     private static final String LOG_TAG = "AppRTCMainActivity";
     private static final int CONNECTION_REQUEST = 1;
     private static final int RC_CALL = 111;
-    final int min = 10000;
-    final int max = 999999;
+    final int min = 1000000;
+    final int max = 99999999;
     int random;
     private ZXingScannerView mScannerView;
     String result;

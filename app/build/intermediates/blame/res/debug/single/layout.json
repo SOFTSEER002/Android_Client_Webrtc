@@ -12,11 +12,11 @@
         "source": "E:\\Projects\\Android_Client_Webrtc\\app\\src\\main\\res\\layout\\activity_call.xml"
     },
     {
-        "merged": "E:\\Projects\\Android_Client_Webrtc\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_sample_camera_render.xml",
-        "source": "E:\\Projects\\Android_Client_Webrtc\\app\\src\\main\\res\\layout\\activity_sample_camera_render.xml"
-    },
-    {
         "merged": "E:\\Projects\\Android_Client_Webrtc\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_sample_data_channel.xml",
         "source": "E:\\Projects\\Android_Client_Webrtc\\app\\src\\main\\res\\layout\\activity_sample_data_channel.xml"
+    },
+    {
+        "merged": "E:\\Projects\\Android_Client_Webrtc\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_sample_camera_render.xml",
+        "source": "E:\\Projects\\Android_Client_Webrtc\\app\\src\\main\\res\\layout\\activity_sample_camera_render.xml"
     }
 ]

@@ -11,23 +11,143 @@
             android:layout_width="match_parent"
             android:layout_height="380dp"
             android:background="@android:color/white"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:weightSum="2">
 
-            <ImageView
-                android:layout_width="0dp"
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:scaleType="centerCrop"
-                android:src="@drawable/map" />
+                android:scaleType="centerCrop" />
 
-            <TextView
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/tempdata"
-                android:layout_width="0dp"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Temp Data \n Battery \n battery Temp \n WiFi signal" />
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/stats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Stats"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#000" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/stats"
+                    android:layout_marginTop="1dp"
+                    android:background="#DBDBDB" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            android:id="@+id/batTemp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/stats"
+                            android:layout_marginTop="2dp"
+                            android:text="Battery Temperature "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#000" />
+
+                        <TextView
+
+                            android:id="@+id/batlvl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/batTemp"
+                            android:layout_marginTop="2dp"
+                            android:text="Battery Level "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/networksignal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="LTE Signal"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#000" />
+
+
+                        <TextView
+                            android:id="@+id/wifisignal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/batlvl"
+                            android:layout_marginTop="2dp"
+                            android:text="Wifi Signal"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            android:id="@+id/batTempsocket"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/stats"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="2dp"
+                            android:text="-"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/batlvlsocket"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="-"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/networksignalsocket"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="-"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/wifisignalsocket"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="-"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#000" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
         </LinearLayout>
 
         <RelativeLayout

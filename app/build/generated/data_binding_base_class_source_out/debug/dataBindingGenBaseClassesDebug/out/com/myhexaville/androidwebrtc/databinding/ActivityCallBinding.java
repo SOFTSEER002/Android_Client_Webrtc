@@ -18,6 +18,18 @@ import org.webrtc.SurfaceViewRenderer;
 
 public abstract class ActivityCallBinding extends ViewDataBinding {
   @NonNull
+  public final TextView batTemp;
+
+  @NonNull
+  public final TextView batTempsocket;
+
+  @NonNull
+  public final TextView batlvl;
+
+  @NonNull
+  public final TextView batlvlsocket;
+
+  @NonNull
   public final ImageButton buttonCallDisconnect;
 
   @NonNull
@@ -51,26 +63,44 @@ public abstract class ActivityCallBinding extends ViewDataBinding {
   public final SurfaceViewRenderer localVideoView;
 
   @NonNull
+  public final TextView networksignal;
+
+  @NonNull
+  public final TextView networksignalsocket;
+
+  @NonNull
   public final PercentFrameLayout remoteVideoLayout;
 
   @NonNull
   public final SurfaceViewRenderer remoteVideoView;
 
   @NonNull
-  public final TextView tempdata;
+  public final TextView stats;
 
   @NonNull
   public final TextView text;
 
+  @NonNull
+  public final TextView wifisignal;
+
+  @NonNull
+  public final TextView wifisignalsocket;
+
   protected ActivityCallBinding(DataBindingComponent _bindingComponent, View _root,
-      int _localFieldCount, ImageButton buttonCallDisconnect, ImageButton buttonCallSwitchCamera,
+      int _localFieldCount, TextView batTemp, TextView batTempsocket, TextView batlvl,
+      TextView batlvlsocket, ImageButton buttonCallDisconnect, ImageButton buttonCallSwitchCamera,
       ImageButton buttonCallToggleMic, LinearLayout buttonsCallContainer,
       FrameLayout callFragmentContainer, SeekBar captureFormatSliderCall,
       TextView captureFormatTextCall, TextView contactNameCall, LinearLayout header,
       PercentFrameLayout localVideoLayout, SurfaceViewRenderer localVideoView,
-      PercentFrameLayout remoteVideoLayout, SurfaceViewRenderer remoteVideoView, TextView tempdata,
-      TextView text) {
+      TextView networksignal, TextView networksignalsocket, PercentFrameLayout remoteVideoLayout,
+      SurfaceViewRenderer remoteVideoView, TextView stats, TextView text, TextView wifisignal,
+      TextView wifisignalsocket) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.batTemp = batTemp;
+    this.batTempsocket = batTempsocket;
+    this.batlvl = batlvl;
+    this.batlvlsocket = batlvlsocket;
     this.buttonCallDisconnect = buttonCallDisconnect;
     this.buttonCallSwitchCamera = buttonCallSwitchCamera;
     this.buttonCallToggleMic = buttonCallToggleMic;
@@ -82,10 +112,14 @@ public abstract class ActivityCallBinding extends ViewDataBinding {
     this.header = header;
     this.localVideoLayout = localVideoLayout;
     this.localVideoView = localVideoView;
+    this.networksignal = networksignal;
+    this.networksignalsocket = networksignalsocket;
     this.remoteVideoLayout = remoteVideoLayout;
     this.remoteVideoView = remoteVideoView;
-    this.tempdata = tempdata;
+    this.stats = stats;
     this.text = text;
+    this.wifisignal = wifisignal;
+    this.wifisignalsocket = wifisignalsocket;
   }
 
   @NonNull
