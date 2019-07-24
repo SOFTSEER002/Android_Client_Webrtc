@@ -1195,7 +1195,7 @@ public class CallActivity extends AppCompatActivity
                     Manifest.permission.ACCESS_FINE_LOCATION)
                     == PackageManager.PERMISSION_GRANTED) {
                 //Location Permission already granted
-//                buildGoogleApiClient();
+
                 mMap.setMyLocationEnabled(true);
             } else {
                 //Request Location Permission
