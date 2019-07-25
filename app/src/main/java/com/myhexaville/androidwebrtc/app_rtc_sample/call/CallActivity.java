@@ -161,7 +161,6 @@ public class CallActivity extends AppCompatActivity
     private PeerConnection peerConnection, localPeerConnection, remotePeerConnection;
     private DataChannel localDataChannel;
     private ImagePicker imagePicker;
-    GoogleApiClient mGoogleApiClient;
 
     int incomingFileSize;
     int currentIndexPointer;

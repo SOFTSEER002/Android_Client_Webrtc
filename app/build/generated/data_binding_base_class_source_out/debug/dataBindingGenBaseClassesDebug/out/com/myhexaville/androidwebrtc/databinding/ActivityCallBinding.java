@@ -8,9 +8,12 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import com.myhexaville.androidwebrtc.app_rtc_sample.view.PercentFrameLayout;
@@ -18,13 +21,13 @@ import org.webrtc.SurfaceViewRenderer;
 
 public abstract class ActivityCallBinding extends ViewDataBinding {
   @NonNull
-  public final TextView batTemp;
+  public final ImageView batTemp;
 
   @NonNull
   public final TextView batTempsocket;
 
   @NonNull
-  public final TextView batlvl;
+  public final ImageView batlvl;
 
   @NonNull
   public final TextView batlvlsocket;
@@ -54,7 +57,10 @@ public abstract class ActivityCallBinding extends ViewDataBinding {
   public final TextView contactNameCall;
 
   @NonNull
-  public final LinearLayout header;
+  public final Button feedbackTv;
+
+  @NonNull
+  public final RelativeLayout header;
 
   @NonNull
   public final PercentFrameLayout localVideoLayout;
@@ -63,7 +69,7 @@ public abstract class ActivityCallBinding extends ViewDataBinding {
   public final SurfaceViewRenderer localVideoView;
 
   @NonNull
-  public final TextView networksignal;
+  public final ImageView networksignal;
 
   @NonNull
   public final TextView networksignalsocket;
@@ -81,21 +87,21 @@ public abstract class ActivityCallBinding extends ViewDataBinding {
   public final TextView text;
 
   @NonNull
-  public final TextView wifisignal;
+  public final ImageView wifisignal;
 
   @NonNull
   public final TextView wifisignalsocket;
 
   protected ActivityCallBinding(DataBindingComponent _bindingComponent, View _root,
-      int _localFieldCount, TextView batTemp, TextView batTempsocket, TextView batlvl,
+      int _localFieldCount, ImageView batTemp, TextView batTempsocket, ImageView batlvl,
       TextView batlvlsocket, ImageButton buttonCallDisconnect, ImageButton buttonCallSwitchCamera,
       ImageButton buttonCallToggleMic, LinearLayout buttonsCallContainer,
       FrameLayout callFragmentContainer, SeekBar captureFormatSliderCall,
-      TextView captureFormatTextCall, TextView contactNameCall, LinearLayout header,
-      PercentFrameLayout localVideoLayout, SurfaceViewRenderer localVideoView,
-      TextView networksignal, TextView networksignalsocket, PercentFrameLayout remoteVideoLayout,
-      SurfaceViewRenderer remoteVideoView, TextView stats, TextView text, TextView wifisignal,
-      TextView wifisignalsocket) {
+      TextView captureFormatTextCall, TextView contactNameCall, Button feedbackTv,
+      RelativeLayout header, PercentFrameLayout localVideoLayout,
+      SurfaceViewRenderer localVideoView, ImageView networksignal, TextView networksignalsocket,
+      PercentFrameLayout remoteVideoLayout, SurfaceViewRenderer remoteVideoView, TextView stats,
+      TextView text, ImageView wifisignal, TextView wifisignalsocket) {
     super(_bindingComponent, _root, _localFieldCount);
     this.batTemp = batTemp;
     this.batTempsocket = batTempsocket;
@@ -109,6 +115,7 @@ public abstract class ActivityCallBinding extends ViewDataBinding {
     this.captureFormatSliderCall = captureFormatSliderCall;
     this.captureFormatTextCall = captureFormatTextCall;
     this.contactNameCall = contactNameCall;
+    this.feedbackTv = feedbackTv;
     this.header = header;
     this.localVideoLayout = localVideoLayout;
     this.localVideoView = localVideoView;
