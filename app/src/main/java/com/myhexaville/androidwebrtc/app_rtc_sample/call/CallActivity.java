@@ -429,8 +429,6 @@ public class CallActivity extends AppCompatActivity
                         Toast.makeText(CallActivity.this, "" + message, Toast.LENGTH_LONG).show();
                         readIncomingMessage(buffer.data);
                     }
-
-
                 });
             }
 
