@@ -20,6 +20,7 @@ import android.databinding.DataBindingUtil;
 import android.databinding.ObservableMap;
 import android.graphics.Bitmap;
 import android.graphics.Point;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -33,6 +34,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -152,7 +155,7 @@ public class CallActivity extends AppCompatActivity
     String roomId = null;
     Bitmap bitmap;
     QRGEncoder qrgEncoder;
-
+    Button feedback_btn;
     private static final String TAG = "SampleDataChannelAct";
     public static final int CHUNK_SIZE = 64000;
 
@@ -198,6 +201,7 @@ public class CallActivity extends AppCompatActivity
         tv_bat_temp = findViewById(R.id.batTempsocket);
         tv_net_signal = findViewById(R.id.networksignalsocket);
         tv_wifi_signal = findViewById(R.id.wifisignalsocket);
+        feedback_btn = findViewById(R.id.feedback_tv);
         initializePeerConnectionFactory();
 
         initializePeerConnections();
@@ -218,7 +222,13 @@ public class CallActivity extends AppCompatActivity
         roomId = intent.getStringExtra(EXTRA_ROOMID);
 
         remoteRenderers.add(binding.remoteVideoView);
-
+        feedback_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://thebrazencorporation.com/feedback"));
+                startActivity(browserIntent);
+            }
+        });
         // Create video renderers.
         rootEglBase = EglBase.create();
         binding.localVideoView.init(rootEglBase.getEglBaseContext(), null);
@@ -248,11 +258,10 @@ public class CallActivity extends AppCompatActivity
         roomConnectionParameters = new RoomConnectionParameters("https://appr.tc", roomId, false);
 
         setupListeners();
-
         peerConnectionClient = PeerConnectionClient.getInstance();
         peerConnectionClient.createPeerConnectionFactory(this, peerConnectionParameters, this);
-
         startCall();
+
     }
 
     private void socketIO() {
@@ -897,9 +906,11 @@ public class CallActivity extends AppCompatActivity
         scan_again.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(CallActivity.this, AppRTCMainActivity.class));
                 finish();
                 dialog.dismiss();
+
             }
         });
         dialog.show();
@@ -1105,20 +1116,20 @@ public class CallActivity extends AppCompatActivity
             disconnect();
         });
 
-            Log.i("Destroying", "onDestroy: ");
+        Log.i("Destroying", "onDestroy: ");
 
-            JSONObject userId = new JSONObject();
-            try {
-                userId.put("username", Username + " DisConnected");
-                mSocket.emit("connect user", userId);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
+        JSONObject userId = new JSONObject();
+        try {
+            userId.put("username", Username + " DisConnected");
+            mSocket.emit("connect user", userId);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
-            mSocket.disconnect();
-            mSocket.off("jsondata", onNewMessage);
-            mSocket.off("connect user", onNewUser);
-            Username = "";
+        mSocket.disconnect();
+        mSocket.off("jsondata", onNewMessage);
+        mSocket.off("connect user", onNewUser);
+        Username = "";
     }
 
     @Override
